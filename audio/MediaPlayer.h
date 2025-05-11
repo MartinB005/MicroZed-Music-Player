@@ -9,6 +9,10 @@
 
 #define BUFF_SIZE 65536
 
+enum AudioFormat {
+    WAV, MP3
+};
+
 class MediaPlayer {
     
     public:
@@ -29,10 +33,12 @@ class MediaPlayer {
         int16_t* playerBuff = bufferA;
         int16_t* fileBuff = bufferB;
         uint32_t sampleRate;
+        AudioFormat audioFormat;
         
         Executor executor;
         VUMeter* vuMeter;
         FILE* file;
+        mp3dec_ex_t dec;
         DAC* dac;
         std::atomic<bool> readStorage{false};
         int playPos = 0;
@@ -40,5 +46,7 @@ class MediaPlayer {
         bool playing = false;
 
         void readWavHeader(FILE* file);
+        void prepareBuffers();
+        void swapAndFeed();
         
 };
