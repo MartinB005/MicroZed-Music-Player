@@ -1,8 +1,8 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "mzapo_parlcd.h"
-#include "mzapo_phys.h"
-#include "mzapo_regs.h"
+#include "core/mzapo_parlcd.h"
+#include "core/mzapo_phys.h"
+#include "core/mzapo_regs.h"
 #include "Encoders.h"
 
 
@@ -16,7 +16,7 @@ void Encoders::setOnValueChange(Encoder encoder, std::function<void(bool)> func)
     this->onValChange[encoder] = func;
 }
 
-void Encoders::setOnPress(Encoder encoder, void (*func)()) {
+void Encoders::setOnPress(Encoder encoder, std::function<void()> func) {
     this->onPress[encoder] = func;
 }
 

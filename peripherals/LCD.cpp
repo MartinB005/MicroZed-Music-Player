@@ -1,12 +1,12 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "LCD.h"
-#include "colors.h"
-#include "mzapo_parlcd.h"
-#include "mzapo_phys.h"
-#include "mzapo_regs.h"
+#include "ui/colors.h"
+#include "core/mzapo_parlcd.h"
+#include "core/mzapo_phys.h"
+#include "core/mzapo_regs.h"
 #include "string.h"
-#include "font_types.h"
+#include "ui/font_types.h"
 #include <functional>
 
 static unsigned char *parlcd_mem_base;

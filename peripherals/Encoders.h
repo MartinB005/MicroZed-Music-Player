@@ -14,7 +14,7 @@ class Encoders {
 
         void init();
         void setOnValueChange(Encoder encoder, std::function<void(bool)>);
-        void setOnPress(Encoder encoder, void (*func)());
+        void setOnPress(Encoder encoder,  std::function<void()>);
         void check();
 
     private:
@@ -22,5 +22,5 @@ class Encoders {
         uint8_t lastVals[3];
         bool pressed[3] = {false};
         std::function<void(bool)> onValChange[3];
-        void (*onPress[3])();
+        std::function<void()> onPress[3];
 };

@@ -7,16 +7,57 @@
 #include <unistd.h>
 #include <dirent.h>
 
-#include "mzapo_parlcd.h"
-#include "mzapo_phys.h"
-#include "mzapo_regs.h"
-#include "font_types.h"
-#include "LCD.h"
-#include "ListView.h"
-#include "View.h"
-#include "FileBrowser.h"
-#include "Encoders.h"
-#include "icons.h"
+#include "core/mzapo_parlcd.h"
+#include "core/mzapo_phys.h"
+#include "core/mzapo_regs.h"
+#include "ui/font_types.h"
+#include "peripherals/LCD.h"
+#include "peripherals/DAC.h"
+#include "audio/MediaPlayer.h"
+#include "ui/ListView.h"
+#include "ui/View.h"
+#include "utils/FileBrowser.h"
+#include "peripherals/Encoders.h"
+#include "utils/Executor.h"
+#include "ui/icons.h"
+
+
+DAC dac;
+VUMeter vuMeter;
+
+
+void openDir(FileBrowser* browser, std::string name, ListView* list) {
+  browser->openDir(name);
+  std::vector<File> files = browser->listFiles();
+
+  for (File file : files)  {
+    list->addItem(file.getName().c_str(), DIRECTORY);
+  }
+}
+
+void openFile(FileBrowser* browser, MediaPlayer* mediaPlayer, File file, ListView* list) {
+  switch (file.getType()) {
+  case CHILD_DIR:
+  case PARENT_DIR:
+    openDir(browser, file.getName(), list);
+    break;
+  
+  case SOUND_FILE:
+    mediaPlayer = new MediaPlayer("/home/Music/style.wav");
+    mediaPlayer->setOutput(&dac);
+    mediaPlayer->showAudioLevel(&vuMeter);
+    mediaPlayer->play();
+  
+  default:
+    break;
+  }
+}
+
+void test() {
+  struct timespec ts;
+  clock_gettime(CLOCK_MONOTONIC, &ts);
+  printf("time %ld\n", ts.tv_sec);
+}
 
 
 int main(int argc, char *argv[]) {
@@ -27,8 +68,6 @@ int main(int argc, char *argv[]) {
   unsigned int c;
   
   printf("Hello world\n");
-
-
   
 
   sleep(1);
@@ -44,20 +83,44 @@ int main(int argc, char *argv[]) {
   FileBrowser browser;
   Encoders encoders;
 
+  vuMeter.init();
+  vuMeter.setMaxVal(0xFFFF);
   encoders.init();
   lcd.init();
+  dac.init();
+
+  /*while (true)
+  {
+    for (int i = 0; i < 16; i++) {
+    dac.write(1 << i);
+    dac.latch();
+    printf("%d\n", 1 << i);
+    getchar();
+    sleep(2);
+  }
+  }*/
+  
+  
+
+  MediaPlayer* mediaPlayer = NULL;
+
+
 
   lcd.setView(&list);
   //lcd.whiteScreen();
   printf("%p", list.getPixels());
 //list.addItem("test", DIRECTORY);
   
+/*
+  browser.openDir("/");
+  std::vector<File> files = browser.listFiles();
 
-  browser.openDir(".");
-  browser.listFiles([&list, &lcd](char* fname, bool dir) {
-    list.addItem(fname, dir ? DIRECTORY : UNKNOWN);
-    printf("%s\n", fname);
-  });
+  for (File file : files)  {
+    list.addItem(file.getName().c_str(), DIRECTORY);
+  }*/
+  
+  
+
 
  /*mem_base = (unsigned char*) map_phys_address(SPILED_REG_BASE_PHYS, SPILED_REG_SIZE, 0);
   
@@ -69,8 +132,16 @@ int main(int argc, char *argv[]) {
  
 
 
-  encoders.setOnValueChange(RED, [] (bool clockwise) {
-    printf("red %d\n", clockwise);
+  encoders.setOnValueChange(RED, [&mediaPlayer] (bool clockwise) {
+    if (mediaPlayer != NULL) {
+      double change = clockwise ? 0.02 : -0.02;
+      double newVol = mediaPlayer->getVolume() + change;
+      if (newVol < 0) newVol = 0;
+      else if (newVol > 1) newVol = 1;
+      
+      mediaPlayer->setVolume(newVol);
+      printf("volume %.2f\n", newVol);
+    }
   });
 
   encoders.setOnValueChange(GREEN, [&list] (bool clockwise) {
@@ -79,7 +150,7 @@ int main(int argc, char *argv[]) {
   
 
   encoders.setOnValueChange(BLUE, [] (bool clockwise) {
-    printf("blue %d\n", clockwise);
+  //  printf("blue %d\n", clockwise);
   });
   
 
@@ -87,18 +158,30 @@ int main(int argc, char *argv[]) {
     printf("red\n");
   });
 
- encoders.setOnPress(GREEN, [] () {
-    printf("green\n");
+ encoders.setOnPress(GREEN, [&list, &browser, &mediaPlayer] () {
+    /*int selected = list.getSelectedIndex();
+    File file = files[selected];
+    openFile(&browser, mediaPlayer, file, &list);*/
   });
 
-encoders.setOnPress(BLUE, [] () {
+encoders.setOnPress(BLUE, [&mediaPlayer] () {
     printf("blue\n");
+    mediaPlayer = new MediaPlayer("/home/Music/style.wav");
+    mediaPlayer->setOutput(&dac);
+    mediaPlayer->showAudioLevel(&vuMeter);
+    mediaPlayer->play();
   });
 
 
-  mem_base = (unsigned char*) map_phys_address(DCSPDRV_REG_BASE_PHYS_0, SPILED_REG_SIZE, 0);
+  while (true) {
+    if (mediaPlayer->isPlaying()) usleep(5000); 
+    encoders.check();
+  }
 
 
+ // mem_base = (unsigned char*) map_phys_address(DCSPDRV_REG_BASE_PHYS_0, SPILED_REG_SIZE, 0);
+
+/*
 struct timespec interval = {.tv_sec = 0, .tv_nsec = 500000}; // 0.5ms
 struct timespec next;
 clock_gettime(CLOCK_MONOTONIC, &next);
@@ -118,17 +201,13 @@ clock_gettime(CLOCK_MONOTONIC, &next);
       next.tv_nsec -= 1000000000;
     }
 
-        // Wait until exact next time
-        clock_nanosleep(CLOCK_MONOTONIC, TIMER_ABSTIME, &next, NULL);
+    // Wait until exact next time
+    clock_nanosleep(CLOCK_MONOTONIC, TIMER_ABSTIME, &next, NULL);
   }
 
-  
+  */
    // encoders.init();
 
-    while (true) {
-      encoders.check();
-      usleep(50);
-    }
   
 
 //parlcd_hx8357_init(parlcd_mem_base);
