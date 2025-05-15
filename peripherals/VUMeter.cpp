@@ -4,7 +4,7 @@
 #include "VUMeter.h"
 
 #define LED_LINE *(volatile uint32_t*)(mem_base + SPILED_REG_LED_LINE_o)
-#define AMPLIFY 10
+#define AMPLIFY 8
 
 void VUMeter::init() {
     mem_base = (unsigned char*) map_phys_address(SPILED_REG_BASE_PHYS, SPILED_REG_SIZE, 0);

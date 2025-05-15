@@ -14,7 +14,12 @@ static unsigned int pixels[HEIGHT * WIDTH] = {0x00000000};
 
 void LCD::setView(View* view) {
     view->setWriteDest(pixels, std::bind(&LCD::update, this));
-}   
+    currentView = view;
+}
+
+View* LCD::getCurrentView() {
+    return currentView;
+}
 
 void LCD::init() {
     parlcd_mem_base = (unsigned char *)map_phys_address(PARLCD_REG_BASE_PHYS, PARLCD_REG_SIZE, 0);
@@ -31,7 +36,6 @@ void LCD::whiteScreen() {
 }
 
 void LCD::update() {
-    printf("update\n");
     parlcd_write_cmd(parlcd_mem_base, 0x2c);
     for (int i = 0; i < WIDTH * HEIGHT; i++)
     {

@@ -3,9 +3,9 @@
 #include <stdint.h>
 
 enum Encoder {
-    RED,
-    GREEN,
-    BLUE
+    RED_KNOB,
+    GREEN_KNOB,
+    BLUE_KNOB
 };
 
 class Encoders {

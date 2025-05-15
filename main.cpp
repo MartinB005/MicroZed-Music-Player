@@ -7,51 +7,10 @@
 #include <unistd.h>
 #include <dirent.h>
 
-#include "core/mzapo_parlcd.h"
-#include "core/mzapo_phys.h"
-#include "core/mzapo_regs.h"
-#include "ui/font_types.h"
-#include "peripherals/LCD.h"
-#include "peripherals/DAC.h"
-#include "audio/MediaPlayer.h"
-#include "ui/ListView.h"
-#include "ui/View.h"
-#include "utils/FileBrowser.h"
 #include "peripherals/Encoders.h"
-#include "utils/Executor.h"
-#include "ui/icons.h"
+#include "ui/Application.h"
 
 
-DAC dac;
-VUMeter vuMeter;
-
-
-void openDir(FileBrowser* browser, std::string name, ListView* list) {
-  browser->openDir(name);
-  std::vector<File> files = browser->listFiles();
-
-  for (File file : files)  {
-    list->addItem(file.getName().c_str(), DIRECTORY);
-  }
-}
-
-void openFile(FileBrowser* browser, MediaPlayer* mediaPlayer, File file, ListView* list) {
-  switch (file.getType()) {
-  case CHILD_DIR:
-  case PARENT_DIR:
-    openDir(browser, file.getName(), list);
-    break;
-  
-  case SOUND_FILE:
-    mediaPlayer = new MediaPlayer("/home/Music/style.wav");
-    mediaPlayer->setOutput(&dac);
-    mediaPlayer->showAudioLevel(&vuMeter);
-    mediaPlayer->play();
-  
-  default:
-    break;
-  }
-}
 
 void test() {
   struct timespec ts;
@@ -78,16 +37,12 @@ int main(int argc, char *argv[]) {
    */
 
 
-  LCD lcd;
-  ListView list(WIDTH, HEIGHT);
-  FileBrowser browser;
   Encoders encoders;
-
-  vuMeter.init();
-  vuMeter.setMaxVal(0xFFFF);
   encoders.init();
-  lcd.init();
-  dac.init();
+
+  Application application;
+  application.start();
+
 
   /*while (true)
   {
@@ -102,23 +57,9 @@ int main(int argc, char *argv[]) {
   
   
 
-  MediaPlayer* mediaPlayer = NULL;
-
-
-
-  lcd.setView(&list);
-  //lcd.whiteScreen();
-  printf("%p", list.getPixels());
 //list.addItem("test", DIRECTORY);
   
-/*
-  browser.openDir("/");
-  std::vector<File> files = browser.listFiles();
 
-  for (File file : files)  {
-    list.addItem(file.getName().c_str(), DIRECTORY);
-  }*/
-  
   
 
 
@@ -131,50 +72,73 @@ int main(int argc, char *argv[]) {
   
  
 
+  
+  encoders.setOnValueChange(RED_KNOB, [&application] (bool clockwise) {
+    MediaPlayer* mediaPlayer = application.getMediaPlayer();
 
-  encoders.setOnValueChange(RED, [&mediaPlayer] (bool clockwise) {
-    if (mediaPlayer != NULL) {
-      double change = clockwise ? 0.02 : -0.02;
-      double newVol = mediaPlayer->getVolume() + change;
-      if (newVol < 0) newVol = 0;
-      else if (newVol > 1) newVol = 1;
-      
-      mediaPlayer->setVolume(newVol);
-      printf("volume %.2f\n", newVol);
-    }
+    double change = clockwise ? 0.02 : -0.02;
+    double newVol = application.getVolume() + change;
+    if (newVol < 0) newVol = 0;
+    else if (newVol > 1) newVol = 1;
+
+    printf("volume %.2f\n", newVol);
+    application.setVolume(newVol);
   });
 
-  encoders.setOnValueChange(GREEN, [&list] (bool clockwise) {
-     clockwise ? list.selectNext() : list.selectPrevious();
+  encoders.setOnValueChange(GREEN_KNOB, [&application] (bool clockwise) {
+      ListView* list = application.getMainListView();
+      application.getLCD()->setView(list);
+      clockwise ? list->selectNext() : list->selectPrevious();
   });
   
 
-  encoders.setOnValueChange(BLUE, [] (bool clockwise) {
+  encoders.setOnValueChange(BLUE_KNOB, [&application] (bool clockwise) {
+   
   //  printf("blue %d\n", clockwise);
   });
   
 
-  encoders.setOnPress(RED, [] () {
-    printf("red\n");
+  encoders.setOnPress(RED_KNOB, [&application] () {
+    if (application.showingPlayingView()) {
+      application.getMediaPlayer()->previousTrack();
+    }
+    application.showPlayingView();
   });
 
- encoders.setOnPress(GREEN, [&list, &browser, &mediaPlayer] () {
-    /*int selected = list.getSelectedIndex();
-    File file = files[selected];
-    openFile(&browser, mediaPlayer, file, &list);*/
+ encoders.setOnPress(GREEN_KNOB, [&application] () {
+    if (application.showingPlayingView()) {
+      if (application.isPlayingTrack()) {
+        application.getMediaPlayer()->pause();
+      }
+      else if (application.hasPausedTrack()) {
+        application.getMediaPlayer()->play();
+      }
+      application.showPlayingView();
+    
+    } else {
+      application.openSelectedFile();
+      usleep(100000);
+    } 
   });
 
-encoders.setOnPress(BLUE, [&mediaPlayer] () {
-    printf("blue\n");
-    mediaPlayer = new MediaPlayer("/home/Music/style.wav");
+encoders.setOnPress(BLUE_KNOB, [&application] () {
+  /*  printf("blue\n");
+    DAC dac;
+    VUMeter vuMeter;
+    MediaPlayer* mediaPlayer = new MediaPlayer("/home/Music/quick.mp3");
     mediaPlayer->setOutput(&dac);
     mediaPlayer->showAudioLevel(&vuMeter);
-    mediaPlayer->play();
+    mediaPlayer->play();*/
+    if (application.showingPlayingView()) {
+      application.getMediaPlayer()->nextTrack();
+    }
+
+    application.showPlayingView();
+
   });
 
-
   while (true) {
-    if (mediaPlayer->isPlaying()) usleep(5000); 
+    if (application.isPlayingTrack()) usleep(5000); 
     encoders.check();
   }
 

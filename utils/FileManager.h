@@ -27,14 +27,17 @@ class File {
 
 };
 
-class FileBrowser {
+class FileManager {
     public:
+        FileManager();
         void openDir(std::string name);
-        std::vector<File> listFiles();
+        std::vector<File>& listFiles();
 
     private:
         std::string currentPath = "";
-        DIR* dir;
+        std::vector<File> files;
+        DIR* dir = NULL;
+        bool listed;
 
         FileType getFileType(struct dirent *entry);
 };

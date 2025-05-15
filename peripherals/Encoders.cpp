@@ -33,13 +33,18 @@ void Encoders::check() {
     uint8_t green = (val >> 8) & 0xFF;
     uint8_t blue = val & 0xFF;
 
-    if (red != lastVals[RED]) onValChange[RED](red < lastVals[RED]);
-    if (green != lastVals[GREEN]) onValChange[GREEN](green < lastVals[GREEN]);
-    if (blue != lastVals[BLUE]) onValChange[BLUE](blue < lastVals[BLUE]);
-
-    lastVals[RED] = red;
-    lastVals[GREEN] = green;
-    lastVals[BLUE] = blue;
+    if (abs(red - lastVals[RED_KNOB]) >= STEP) {
+        onValChange[RED_KNOB](red < lastVals[RED_KNOB]);
+        lastVals[RED_KNOB] = red;
+    } 
+    if (abs(green - lastVals[GREEN_KNOB]) >= 4) {
+        onValChange[GREEN_KNOB](green < lastVals[GREEN_KNOB]);
+        lastVals[GREEN_KNOB] = green;
+    } 
+    if (abs(blue - lastVals[BLUE_KNOB]) >= 4) {
+        onValChange[BLUE_KNOB](blue < lastVals[BLUE_KNOB]);
+        lastVals[BLUE_KNOB] = blue;
+    }
 
 
 

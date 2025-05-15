@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdio.h>
 #include "ListView.h"
 #include "colors.h"
 
@@ -10,26 +11,38 @@ ListView::ListView(int width, int height) : View(width, height) {
     
 }
 
-void ListView::addItem(const char* text, int icon) {
+void ListView::addItem(std::string text, int icon) {
     Item item = {text, icon};
     items.push_back(item);
-    update();
+    selected = 0;
 }
 
-void ListView::update() {
+void ListView::update()  {
+    printf("update list\n");
+    View::blackScreen();
+
     int item_height = getLineHeight() + LINE_SPACING;
-    for (int i = 0; i < items.size() &&  i * item_height < height; i++) {
-        renderText((char*) items[i].text, LEFT_PADDING, i * item_height, selected == i ? BLACK : WHITE, selected == i ? WHITE : BLACK);
+    
+    for (int i = scroll, x = 0; i < items.size() &&  x < height; i++, x += item_height) {
+        renderText(items[i].text.c_str(), LEFT_PADDING, x, selected == i ? BLACK : WHITE, selected == i ? WHITE : BLACK);
        // renderRect(0, i * item_height - DIVIDER_HEIGHT, WIDTH, DIVIDER_HEIGHT, WHITE);
     }
 
-   /// renderText(items[0].text, LEFT_PADDING, 0, WHITE, BLACK);
-    View::update();
+    View::updateScreen();
+}
+
+void ListView::clear() {
+    items.clear();
 }
 
 void ListView::selectNext() {
     if (selected < items.size() - 1) {
         selected++;
+
+        int item_height = getLineHeight() + LINE_SPACING;
+        if ((selected - scroll + 1) * item_height > height) {
+            scroll++;
+        }
         update();
     }
 }
@@ -37,6 +50,12 @@ void ListView::selectNext() {
 void ListView::selectPrevious() {
     if (selected > 0) {
         selected--;
+
+        int item_height = getLineHeight() + LINE_SPACING;
+        if ((selected - scroll) * item_height < 0) {
+            scroll--;
+        }
+        
         update();
     }
 }
