@@ -1,7 +1,7 @@
 # The MicroZed Music Player
 
 This is low-level music player written in C/C++ with custom DA Converter as an audio output. It includes simple GUI with file browser and playing controls, 
-which is rendering on 320 x 480 LCD. It uses rotatary encoders as the user input. Current audio level is shown by 32-LED line.
+which is rendering on 320 x 480 LCD. Player can be controlled by rotary encoders. Current audio level is shown by 32-LED line.
 
 ## Target Device
 - MICROZED EVALUATION KIT ADSAES-Z7MB-7Z010-G
