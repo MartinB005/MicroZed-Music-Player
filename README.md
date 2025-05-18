@@ -17,7 +17,7 @@ which is rendering on 320 x 480 LCD. Player can be controlled by rotary encoders
 - 10-bit R2R digital to analog converter with LM386 amplifier
 - 2x 74HC595 shift register
 - Jack 3.5 mm and terminal block for speaker
-- See .sch and .brd
+- See [dac.sch](dac-design/dac.sch) and [dac.brd](dac-design/dac.brd)
 
 Current implementation uses 3 GPIO pins and 2 shift registers (see [DAC.cpp](peripherals/DAC.cpp) and [mzapo_regs.h](core/mzapo_regs.h) where is adresses of mapped pins).
 It is possible to do it without shift registers, if you have 10 free GPIO-s.
