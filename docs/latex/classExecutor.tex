@@ -1,0 +1,72 @@
+\doxysection{Executor Class Reference}
+\hypertarget{classExecutor}{}\label{classExecutor}\index{Executor@{Executor}}
+
+
+{\ttfamily \#include $<$Executor.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classExecutor_a45818249f5097d0d8375908eb6cd3a7c}{schedule}} (std\+::function$<$ void()$>$ func, double \mbox{\hyperlink{DAC_8cpp_a091de8e47dabaf0cbbe810824f6fb94d}{interval}}, bool high\+Priority=false)
+\begin{DoxyCompactList}\small\item\em Schedule new timed action to the executor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classExecutor_a406efa16b005529117a3e1384fc50656}{run\+After}} (std\+::function$<$ void()$>$ func, double delay, bool only\+Once)
+\begin{DoxyCompactList}\small\item\em Run action after specified time on another thread. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classExecutor_ac79bef9eabff1e05042c0ab54e4962e5}{stop\+All}} ()
+\begin{DoxyCompactList}\small\item\em Stop all scheduled actions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classExecutor_a406efa16b005529117a3e1384fc50656}\label{classExecutor_a406efa16b005529117a3e1384fc50656} 
+\index{Executor@{Executor}!runAfter@{runAfter}}
+\index{runAfter@{runAfter}!Executor@{Executor}}
+\doxysubsubsection{\texorpdfstring{runAfter()}{runAfter()}}
+{\footnotesize\ttfamily void Executor\+::run\+After (\begin{DoxyParamCaption}\item[{std\+::function$<$ void()$>$}]{func,  }\item[{double}]{delay,  }\item[{bool}]{only\+Once }\end{DoxyParamCaption})}
+
+
+
+Run action after specified time on another thread. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em func} & callback of the aciton \\
+\hline
+{\em delay} & when the action should be run (microseconds) \\
+\hline
+{\em only\+Once} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classExecutor_a45818249f5097d0d8375908eb6cd3a7c}\label{classExecutor_a45818249f5097d0d8375908eb6cd3a7c} 
+\index{Executor@{Executor}!schedule@{schedule}}
+\index{schedule@{schedule}!Executor@{Executor}}
+\doxysubsubsection{\texorpdfstring{schedule()}{schedule()}}
+{\footnotesize\ttfamily void Executor\+::schedule (\begin{DoxyParamCaption}\item[{std\+::function$<$ void()$>$}]{func,  }\item[{double}]{interval,  }\item[{bool}]{high\+Priority = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Schedule new timed action to the executor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em func} & callback of the action \\
+\hline
+{\em interval} & interval in microseconds \\
+\hline
+{\em high\+Priority} & whether thread should have a high priority \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classExecutor_ac79bef9eabff1e05042c0ab54e4962e5}\label{classExecutor_ac79bef9eabff1e05042c0ab54e4962e5} 
+\index{Executor@{Executor}!stopAll@{stopAll}}
+\index{stopAll@{stopAll}!Executor@{Executor}}
+\doxysubsubsection{\texorpdfstring{stopAll()}{stopAll()}}
+{\footnotesize\ttfamily void Executor\+::stop\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Stop all scheduled actions. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+utils/\mbox{\hyperlink{Executor_8h}{Executor.\+h}}\item 
+utils/\mbox{\hyperlink{Executor_8cpp}{Executor.\+cpp}}\end{DoxyCompactItemize}

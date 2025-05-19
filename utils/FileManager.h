@@ -16,6 +16,12 @@ class File {
 
     public:
         
+        /**
+         * @brief Construct a new File object
+         * 
+         * @param path absolute path
+         * @param type file type
+         */
         File(std::string path, FileType type);
         FileType getType();
         std::string getName();
@@ -30,7 +36,19 @@ class File {
 class FileManager {
     public:
         FileManager();
+
+        /**
+         * @brief Open the directory
+         * 
+         * @param name of the directory
+         */
         void openDir(std::string name);
+
+        /**
+         * @brief list directory files
+         * 
+         * @return std::vector<File>& file list reference
+         */
         std::vector<File>& listFiles();
 
     private:
@@ -39,5 +57,8 @@ class FileManager {
         DIR* dir = NULL;
         bool listed;
 
+        /**
+         * @brief Get the File Type from dirent entry
+         */
         FileType getFileType(struct dirent *entry);
 };

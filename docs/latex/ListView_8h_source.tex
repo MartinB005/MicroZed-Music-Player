@@ -1,0 +1,42 @@
+\doxysection{List\+View.\+h}
+\hypertarget{ListView_8h_source}{}\label{ListView_8h_source}\index{ui/ListView.h@{ui/ListView.h}}
+\mbox{\hyperlink{ListView_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{LCD_8h}{peripherals/LCD.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{View_8h}{View.h}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structItem}{Item}}\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ std::string\ \mbox{\hyperlink{structItem_a642f55297b0b333b5046585d1d8e9957}{text}};}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structItem_aeb7fbaab450ba064028ad767022f0e96}{icon}};}
+\DoxyCodeLine{00010\ \};}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classListView}{ListView}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classView}{View}}\ \{}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classListView}{ListView}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classView_ae039aa744b085db819ae149705b2c32b}{width}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classView_a6e3e5c18893617490f02166641356746}{height}});}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classListView_aca40b6a50fe10f1364cb9e81ac7c52cb}{addItem}}(std::string,\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{icons_8h_a2e0a7df2c213e15b6235d43a157f38bf}{icon}});}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classListView_a3b516683beb37f99827c170fb99a9cae}{selectNext}}();}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classListView_a1141754db4e94cc5ef825ad446ae6cb1}{selectPrevious}}();}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structItem}{Item}}\ \mbox{\hyperlink{classListView_a8a9b0f88b42d10442cb0fce8ac672b1f}{getSelectedItem}}();}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classListView_aa4a9a967d2d60efeb367b2bc1c73a420}{getSelectedIndex}}();}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classListView_a75223249201069eaf9d24802a5193afe}{update}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classListView_acdf26f92a55e8bac819d0b716aa8c2cc}{clear}}();}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ selected\ =\ 0;}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ scroll\ =\ 0;}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ std::vector<Item>\ items;}
+\DoxyCodeLine{00065\ \};}
+
+\end{DoxyCode}

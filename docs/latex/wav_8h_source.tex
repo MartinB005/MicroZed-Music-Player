@@ -1,0 +1,29 @@
+\doxysection{wav.\+h}
+\hypertarget{wav_8h_source}{}\label{wav_8h_source}\index{audio/wav.h@{audio/wav.h}}
+\mbox{\hyperlink{wav_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00004\ \ \ \ \ \textcolor{keywordtype}{char}\ chunkID[4];\ \ \ \ }
+\DoxyCodeLine{00005\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structRIFFHeader_a0eb5cb11bc31019a434d07e6551f08d3}{chunkSize}};\ }
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{keywordtype}{char}\ format[4];\ }
+\DoxyCodeLine{00007\ \}\ \mbox{\hyperlink{structRIFFHeader}{RIFFHeader}};}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{char}\ subchunk1ID[4];\ }
+\DoxyCodeLine{00011\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structFmtChunk_a33e9c212b901ba8f719ec9affcc0448e}{subchunk1Size}};}
+\DoxyCodeLine{00012\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{structFmtChunk_a59a8ca70c0edc6b8a12d3e6c2e2d1e5e}{audioFormat}};\ }
+\DoxyCodeLine{00013\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{structFmtChunk_a88fce72224b4e35805be8648f7f87c3a}{numChannels}};}
+\DoxyCodeLine{00014\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structFmtChunk_a23404bb22f5a8e80f21d7c59fc7eecda}{sampleRate}};}
+\DoxyCodeLine{00015\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structFmtChunk_a59298a0a4f676593cd26a263d323b0b3}{byteRate}};}
+\DoxyCodeLine{00016\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{structFmtChunk_a1245b1d35c208fadae4d4b434cc06449}{blockAlign}};}
+\DoxyCodeLine{00017\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{structFmtChunk_a175bc4c31b0286790b2b18fbc8241156}{bitsPerSample}};}
+\DoxyCodeLine{00018\ \}\ \mbox{\hyperlink{structFmtChunk}{FmtChunk}};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{char}\ subchunk2ID[4];\ \ \ }
+\DoxyCodeLine{00022\ \ \ \ \ uint32\_t\ \mbox{\hyperlink{structDataChunk_abea15f8fdd093d564b90c6fd454f6bb3}{subchunk2Size}};\ }
+\DoxyCodeLine{00023\ \}\ \mbox{\hyperlink{structDataChunk}{DataChunk}};}
+
+\end{DoxyCode}

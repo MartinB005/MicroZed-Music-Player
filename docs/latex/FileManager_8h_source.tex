@@ -1,0 +1,51 @@
+\doxysection{File\+Manager.\+h}
+\hypertarget{FileManager_8h_source}{}\label{FileManager_8h_source}\index{utils/FileManager.h@{utils/FileManager.h}}
+\mbox{\hyperlink{FileManager_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <dirent.h>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{FileManager_8h_a2c794c5c13ab4dd7e65bad031dbe41c3}{FileType}}\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \mbox{\hyperlink{FileManager_8h_a2c794c5c13ab4dd7e65bad031dbe41c3ae0a76699419eeff377e7d00ea0603625}{CHILD\_DIR}},}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{FileManager_8h_a2c794c5c13ab4dd7e65bad031dbe41c3aff125052574a6a0882610e23eb5ac0fc}{PARENT\_DIR}},}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{FileManager_8h_a2c794c5c13ab4dd7e65bad031dbe41c3a4c63500d8ca5573aa023c92de5213062}{SOUND\_FILE}},}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{FileManager_8h_a2c794c5c13ab4dd7e65bad031dbe41c3a80239aa32ad02d66c1d30074f44c8c85}{UNKNOWN\_FILE}},}
+\DoxyCodeLine{00013\ \};}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classFile}{File}}\ \{}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classFile}{File}}(std::string\ path,\ \mbox{\hyperlink{FileManager_8h_a2c794c5c13ab4dd7e65bad031dbe41c3}{FileType}}\ type);}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{FileManager_8h_a2c794c5c13ab4dd7e65bad031dbe41c3}{FileType}}\ \mbox{\hyperlink{classFile_a3e1982c81e777f9915b720a769932d35}{getType}}();}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classFile_a9e324b9cb28fc557b92901f2481ce0fb}{getName}}();}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classFile_a24470e8911f92326ae7fd610c2e89b5e}{getAbsoulutePath}}();}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{FileManager_8h_a2c794c5c13ab4dd7e65bad031dbe41c3}{FileType}}\ type;}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ std::string\ path;}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classFileManager}{FileManager}}\ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classFileManager_a8afd512c06be9daf140cc19d71f9b391}{FileManager}}();}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFileManager_a268a772b1c1f11e95f59c606f530c08e}{openDir}}(std::string\ name);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ std::vector<File>\&\ \mbox{\hyperlink{classFileManager_a63ff4fe956c79e76d614e3d3d8cdf68c}{listFiles}}();}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ std::string\ currentPath\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ std::vector<File>\ files;}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ DIR*\ dir\ =\ NULL;}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ listed;}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{FileManager_8h_a2c794c5c13ab4dd7e65bad031dbe41c3}{FileType}}\ getFileType(\textcolor{keyword}{struct}\ dirent\ *entry);}
+\DoxyCodeLine{00064\ \};}
+
+\end{DoxyCode}

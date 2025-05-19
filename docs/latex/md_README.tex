@@ -1,0 +1,46 @@
+\chapter{The Micro\+Zed Music Player}
+\hypertarget{md_README}{}\label{md_README}\index{The MicroZed Music Player@{The MicroZed Music Player}}
+\label{md_README_autotoc_md0}%
+\Hypertarget{md_README_autotoc_md0}%
+ This is low-\/level music player written in C/\+C++ with custom DA Converter as an audio output. It includes simple GUI with file browser and playing controls, which is rendering on 320 x 480 \doxylink{classLCD}{LCD}. Player can be controlled by rotary encoders. Current audio level is shown by 32-\/LED line.\hypertarget{md_README_autotoc_md1}{}\doxysection{\texorpdfstring{Target Device}{Target Device}}\label{md_README_autotoc_md1}
+
+\begin{DoxyItemize}
+\item MICROZED EVALUATION KIT ADSAES-\/\+Z7\+MB-\/7\+Z010-\/G
+\item CPU\+: Dual ARM® Cortex™-\/\+A9 MPCore™ @ 866 MHz (NEON™ \& Single / Double Precision Floating Point)
+\item Operating system\+: GNU/\+Linux
+\item Development kit Micro\+Zed APO (\href{https://gitlab.com/pikron/projects/mz_apo/microzed_apo}{\texttt{ https\+://gitlab.\+com/pikron/projects/mz\+\_\+apo/microzed\+\_\+apo}})
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md2}{}\doxysection{\texorpdfstring{Supported Audio Formats}{Supported Audio Formats}}\label{md_README_autotoc_md2}
+
+\begin{DoxyItemize}
+\item 16-\/bit PCM WAV, stereo (2-\/channel), uncompressed
+\item MPEG-\/1 Layer III (MP3), stereo, lossy compression
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md3}{}\doxysection{\texorpdfstring{DA Converter}{DA Converter}}\label{md_README_autotoc_md3}
+
+\begin{DoxyItemize}
+\item 10-\/bit R2R digital to analog converter with LM386 amplifier
+\item 2x 74HC595 shift register
+\item Jack 3.\+5 mm and terminal block for speaker
+\item See \href{dac-design/dac.sch}{\texttt{ dac.\+sch}} and \href{dac-design/dac.brd}{\texttt{ dac.\+brd}}
+\end{DoxyItemize}
+
+Current implementation uses 3 GPIO pins and 2 shift registers (see \href{peripherals/DAC.cpp}{\texttt{ DAC.\+cpp}} and \href{core/mzapo_regs.h}{\texttt{ mzapo\+\_\+regs.\+h}} where is adresses of mapped pins). It is possible to do it without shift registers, if you have 10 free GPIO-\/s.\hypertarget{md_README_autotoc_md4}{}\doxysection{\texorpdfstring{Instalation}{Instalation}}\label{md_README_autotoc_md4}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\#\ clone\ the\ repo}
+\DoxyCodeLine{git\ clone\ https://github.com/MartinB005/MicroZed-\/Music-\/Player.git}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\ Navigate\ to\ the\ directory}
+\DoxyCodeLine{cd\ MicroZed-\/Music-\/Player}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\ Edit\ your\ local\ IP\ address\ in\ Makefile}
+\DoxyCodeLine{TARGET\_IP\ ?=\ xxx.xxx.xxx.xxx}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\ compile\ and\ run\ the\ program}
+\DoxyCodeLine{make\ run}
+
+\end{DoxyCode}
+\hypertarget{md_README_autotoc_md5}{}\doxysection{\texorpdfstring{Used Libraries}{Used Libraries}}\label{md_README_autotoc_md5}
+MP3 decoding\+: \href{https://github.com/lieff/minimp3}{\texttt{ https\+://github.\+com/lieff/minimp3}}\hypertarget{md_README_autotoc_md6}{}\doxysection{\texorpdfstring{Demonstration Videos}{Demonstration Videos}}\label{md_README_autotoc_md6}
+\href{https://github.com/user-attachments/assets/9bd06672-fdcf-4da8-a37d-1d057ed24d74}{\texttt{ https\+://github.\+com/user-\/attachments/assets/9bd06672-\/fdcf-\/4da8-\/a37d-\/1d057ed24d74}}
+
+\href{https://github.com/user-attachments/assets/56f21344-d6c7-4b53-9a67-5a15862af7fc}{\texttt{ https\+://github.\+com/user-\/attachments/assets/56f21344-\/d6c7-\/4b53-\/9a67-\/5a15862af7fc}} 

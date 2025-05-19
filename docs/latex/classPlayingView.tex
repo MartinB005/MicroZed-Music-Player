@@ -1,0 +1,128 @@
+\doxysection{Playing\+View Class Reference}
+\hypertarget{classPlayingView}{}\label{classPlayingView}\index{PlayingView@{PlayingView}}
+
+
+{\ttfamily \#include $<$Playing\+View.\+h$>$}
+
+
+
+Inheritance diagram for Playing\+View\+:
+% FIG 0
+
+
+Collaboration diagram for Playing\+View\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPlayingView_a633293a9539eca232a63fd75b6092802}{Playing\+View}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new Playing \doxylink{classView}{View} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPlayingView_acc4d8cba6da94cbd0ca5b3bfdbf997fe}{update}} () override
+\begin{DoxyCompactList}\small\item\em Update the view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPlayingView_a4562c0c636cae2e1e65e0240326ffa5e}{set\+Media\+Player}} (\mbox{\hyperlink{classMediaPlayer}{Media\+Player}} \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em Set the Media Player object for playing view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPlayingView_aa78487239f0607ccc0cb3d157b105d9a}{update\+Seek\+Bar}} (int position)
+\begin{DoxyCompactList}\small\item\em update the seek bar in playing view \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classView}{View}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classView_ae8b891693776332f98a9af7d34bbf94e}{View}} (int \mbox{\hyperlink{classView_ae039aa744b085db819ae149705b2c32b}{width}}, int \mbox{\hyperlink{classView_a6e3e5c18893617490f02166641356746}{height}})
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{classView}{View} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classView_a109130223eb08586d7871586b5493179}{set\+Write\+Dest}} (unsigned int \texorpdfstring{$\ast$}{*}addr, std\+::function$<$ void()$>$ func)
+\begin{DoxyCompactList}\small\item\em Set the destination where should the object write the output. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classView_a5eef577fe576d8a9aafa324f7cec2ddd}{update\+Screen}} ()
+\begin{DoxyCompactList}\small\item\em Update the view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classView_a92f302a31d4b4359a2ec0323b79e2531}{black\+Screen}} ()
+\begin{DoxyCompactList}\small\item\em Show the black screen. \end{DoxyCompactList}\item 
+unsigned int \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classView_a37de1b19bb9d05dbb359c9cb369b6dac}{get\+Pixels}} ()
+\begin{DoxyCompactList}\small\item\em Get the Pixels destination pointer. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classView_a542c85fdbe5974f4ccb80a3fc662ac6e}{get\+Width}} ()
+\item 
+int \mbox{\hyperlink{classView_adddf60bbe68432cf11dddf9d3eb9c1d8}{get\+Height}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classView}{View}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classView_abdb53d87a0348ac5536257c962647b12}{render\+Text}} (const char \texorpdfstring{$\ast$}{*}text, int x, int y, int color, int background)
+\begin{DoxyCompactList}\small\item\em Render text on the view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classView_a642d2bbe5b64a1c473aea2d45584f5d8}{render\+Text}} (const char \texorpdfstring{$\ast$}{*}text, int pos\+\_\+x, int pos\+\_\+y, int color, int background, int scale)
+\begin{DoxyCompactList}\small\item\em Render text on the view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classView_a68cea4a3af161364cc40fab71f01e9de}{render\+Rect}} (int pos\+\_\+x, int pos\+\_\+y, int \mbox{\hyperlink{classView_ae039aa744b085db819ae149705b2c32b}{width}}, int \mbox{\hyperlink{classView_a6e3e5c18893617490f02166641356746}{height}}, int color)
+\begin{DoxyCompactList}\small\item\em Render rectangle on the view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classView_a2dc303af269e53d0f07c855ee09486c5}{render\+Icon}} (\mbox{\hyperlink{icons_8h_a2e0a7df2c213e15b6235d43a157f38bf}{icon}} icn, int x, int y, float scale, int color, int background=\mbox{\hyperlink{colors_8h_a7b3b25cba33b07c303f3060fe41887f6}{BLACK}})
+\begin{DoxyCompactList}\small\item\em Render icon on the view. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classView_a943fbdf0eff3ee24f758fc7099f334dc}{get\+Char\+Pixel}} (char c, int x, int y, int color, int background)
+\begin{DoxyCompactList}\small\item\em Get the character pixel of the text. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classView_aa2c990d7ff1f68c912bca5f7e03124c8}{get\+Word\+Pixel}} (char \texorpdfstring{$\ast$}{*}str, int x, int y, int color, int background)
+\begin{DoxyCompactList}\small\item\em Get the word pixel. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classView_a86162e9f21a53ef042530a984d8c9e10}{get\+Line\+Height}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classView}{View}}}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classView_ae039aa744b085db819ae149705b2c32b}{width}}
+\item 
+int \mbox{\hyperlink{classView_a6e3e5c18893617490f02166641356746}{height}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classPlayingView_a633293a9539eca232a63fd75b6092802}\label{classPlayingView_a633293a9539eca232a63fd75b6092802} 
+\index{PlayingView@{PlayingView}!PlayingView@{PlayingView}}
+\index{PlayingView@{PlayingView}!PlayingView@{PlayingView}}
+\doxysubsubsection{\texorpdfstring{PlayingView()}{PlayingView()}}
+{\footnotesize\ttfamily Playing\+View\+::\+Playing\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct a new Playing \doxylink{classView}{View} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classPlayingView_a4562c0c636cae2e1e65e0240326ffa5e}\label{classPlayingView_a4562c0c636cae2e1e65e0240326ffa5e} 
+\index{PlayingView@{PlayingView}!setMediaPlayer@{setMediaPlayer}}
+\index{setMediaPlayer@{setMediaPlayer}!PlayingView@{PlayingView}}
+\doxysubsubsection{\texorpdfstring{setMediaPlayer()}{setMediaPlayer()}}
+{\footnotesize\ttfamily void Playing\+View\+::set\+Media\+Player (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMediaPlayer}{Media\+Player}} \texorpdfstring{$\ast$}{*}}]{media\+Player }\end{DoxyParamCaption})}
+
+
+
+Set the Media Player object for playing view. 
+
+\Hypertarget{classPlayingView_acc4d8cba6da94cbd0ca5b3bfdbf997fe}\label{classPlayingView_acc4d8cba6da94cbd0ca5b3bfdbf997fe} 
+\index{PlayingView@{PlayingView}!update@{update}}
+\index{update@{update}!PlayingView@{PlayingView}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Playing\+View\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Update the view. 
+
+
+
+Implements \mbox{\hyperlink{classView_a8caf26d67197c101c37da5c9cddfb534}{View}}.
+
+\Hypertarget{classPlayingView_aa78487239f0607ccc0cb3d157b105d9a}\label{classPlayingView_aa78487239f0607ccc0cb3d157b105d9a} 
+\index{PlayingView@{PlayingView}!updateSeekBar@{updateSeekBar}}
+\index{updateSeekBar@{updateSeekBar}!PlayingView@{PlayingView}}
+\doxysubsubsection{\texorpdfstring{updateSeekBar()}{updateSeekBar()}}
+{\footnotesize\ttfamily void Playing\+View\+::update\+Seek\+Bar (\begin{DoxyParamCaption}\item[{int}]{position }\end{DoxyParamCaption})}
+
+
+
+update the seek bar in playing view 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & value between 0 and 100 \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+ui/\mbox{\hyperlink{PlayingView_8h}{Playing\+View.\+h}}\item 
+ui/\mbox{\hyperlink{PlayingView_8cpp}{Playing\+View.\+cpp}}\end{DoxyCompactItemize}

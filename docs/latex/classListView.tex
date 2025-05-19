@@ -1,0 +1,183 @@
+\doxysection{List\+View Class Reference}
+\hypertarget{classListView}{}\label{classListView}\index{ListView@{ListView}}
+
+
+{\ttfamily \#include $<$List\+View.\+h$>$}
+
+
+
+Inheritance diagram for List\+View\+:
+% FIG 0
+
+
+Collaboration diagram for List\+View\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classListView_a0aa11b8aff080b35ad6b37e4bdd9f817}{List\+View}} (int \mbox{\hyperlink{classView_ae039aa744b085db819ae149705b2c32b}{width}}, int \mbox{\hyperlink{classView_a6e3e5c18893617490f02166641356746}{height}})
+\begin{DoxyCompactList}\small\item\em Construct a new List \doxylink{classView}{View} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classListView_aca40b6a50fe10f1364cb9e81ac7c52cb}{add\+Item}} (std\+::string, int \mbox{\hyperlink{icons_8h_a2e0a7df2c213e15b6235d43a157f38bf}{icon}})
+\begin{DoxyCompactList}\small\item\em Add new item to the list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classListView_a3b516683beb37f99827c170fb99a9cae}{select\+Next}} ()
+\begin{DoxyCompactList}\small\item\em Select next item of the list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classListView_a1141754db4e94cc5ef825ad446ae6cb1}{select\+Previous}} ()
+\begin{DoxyCompactList}\small\item\em Select previous item of the list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structItem}{Item}} \mbox{\hyperlink{classListView_a8a9b0f88b42d10442cb0fce8ac672b1f}{get\+Selected\+Item}} ()
+\begin{DoxyCompactList}\small\item\em Get the selected item struct. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classListView_aa4a9a967d2d60efeb367b2bc1c73a420}{get\+Selected\+Index}} ()
+\begin{DoxyCompactList}\small\item\em Get the Selected Index. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classListView_a75223249201069eaf9d24802a5193afe}{update}} () override
+\begin{DoxyCompactList}\small\item\em Update the view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classListView_acdf26f92a55e8bac819d0b716aa8c2cc}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Remove all items from list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classView}{View}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classView_ae8b891693776332f98a9af7d34bbf94e}{View}} (int \mbox{\hyperlink{classView_ae039aa744b085db819ae149705b2c32b}{width}}, int \mbox{\hyperlink{classView_a6e3e5c18893617490f02166641356746}{height}})
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{classView}{View} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classView_a109130223eb08586d7871586b5493179}{set\+Write\+Dest}} (unsigned int \texorpdfstring{$\ast$}{*}addr, std\+::function$<$ void()$>$ func)
+\begin{DoxyCompactList}\small\item\em Set the destination where should the object write the output. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classView_a5eef577fe576d8a9aafa324f7cec2ddd}{update\+Screen}} ()
+\begin{DoxyCompactList}\small\item\em Update the view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classView_a92f302a31d4b4359a2ec0323b79e2531}{black\+Screen}} ()
+\begin{DoxyCompactList}\small\item\em Show the black screen. \end{DoxyCompactList}\item 
+unsigned int \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classView_a37de1b19bb9d05dbb359c9cb369b6dac}{get\+Pixels}} ()
+\begin{DoxyCompactList}\small\item\em Get the Pixels destination pointer. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classView_a542c85fdbe5974f4ccb80a3fc662ac6e}{get\+Width}} ()
+\item 
+int \mbox{\hyperlink{classView_adddf60bbe68432cf11dddf9d3eb9c1d8}{get\+Height}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classView}{View}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classView_abdb53d87a0348ac5536257c962647b12}{render\+Text}} (const char \texorpdfstring{$\ast$}{*}text, int x, int y, int color, int background)
+\begin{DoxyCompactList}\small\item\em Render text on the view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classView_a642d2bbe5b64a1c473aea2d45584f5d8}{render\+Text}} (const char \texorpdfstring{$\ast$}{*}text, int pos\+\_\+x, int pos\+\_\+y, int color, int background, int scale)
+\begin{DoxyCompactList}\small\item\em Render text on the view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classView_a68cea4a3af161364cc40fab71f01e9de}{render\+Rect}} (int pos\+\_\+x, int pos\+\_\+y, int \mbox{\hyperlink{classView_ae039aa744b085db819ae149705b2c32b}{width}}, int \mbox{\hyperlink{classView_a6e3e5c18893617490f02166641356746}{height}}, int color)
+\begin{DoxyCompactList}\small\item\em Render rectangle on the view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classView_a2dc303af269e53d0f07c855ee09486c5}{render\+Icon}} (\mbox{\hyperlink{icons_8h_a2e0a7df2c213e15b6235d43a157f38bf}{icon}} icn, int x, int y, float scale, int color, int background=\mbox{\hyperlink{colors_8h_a7b3b25cba33b07c303f3060fe41887f6}{BLACK}})
+\begin{DoxyCompactList}\small\item\em Render icon on the view. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classView_a943fbdf0eff3ee24f758fc7099f334dc}{get\+Char\+Pixel}} (char c, int x, int y, int color, int background)
+\begin{DoxyCompactList}\small\item\em Get the character pixel of the text. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classView_aa2c990d7ff1f68c912bca5f7e03124c8}{get\+Word\+Pixel}} (char \texorpdfstring{$\ast$}{*}str, int x, int y, int color, int background)
+\begin{DoxyCompactList}\small\item\em Get the word pixel. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classView_a86162e9f21a53ef042530a984d8c9e10}{get\+Line\+Height}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classView}{View}}}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classView_ae039aa744b085db819ae149705b2c32b}{width}}
+\item 
+int \mbox{\hyperlink{classView_a6e3e5c18893617490f02166641356746}{height}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classListView_a0aa11b8aff080b35ad6b37e4bdd9f817}\label{classListView_a0aa11b8aff080b35ad6b37e4bdd9f817} 
+\index{ListView@{ListView}!ListView@{ListView}}
+\index{ListView@{ListView}!ListView@{ListView}}
+\doxysubsubsection{\texorpdfstring{ListView()}{ListView()}}
+{\footnotesize\ttfamily List\+View\+::\+List\+View (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+
+
+Construct a new List \doxylink{classView}{View} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & of the view \\
+\hline
+{\em height} & of the view \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classListView_aca40b6a50fe10f1364cb9e81ac7c52cb}\label{classListView_aca40b6a50fe10f1364cb9e81ac7c52cb} 
+\index{ListView@{ListView}!addItem@{addItem}}
+\index{addItem@{addItem}!ListView@{ListView}}
+\doxysubsubsection{\texorpdfstring{addItem()}{addItem()}}
+{\footnotesize\ttfamily void List\+View\+::add\+Item (\begin{DoxyParamCaption}\item[{std\+::string}]{text,  }\item[{int}]{icon }\end{DoxyParamCaption})}
+
+
+
+Add new item to the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em icon} & at the start of the item (not implemented yet) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classListView_acdf26f92a55e8bac819d0b716aa8c2cc}\label{classListView_acdf26f92a55e8bac819d0b716aa8c2cc} 
+\index{ListView@{ListView}!clear@{clear}}
+\index{clear@{clear}!ListView@{ListView}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void List\+View\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Remove all items from list. 
+
+\Hypertarget{classListView_aa4a9a967d2d60efeb367b2bc1c73a420}\label{classListView_aa4a9a967d2d60efeb367b2bc1c73a420} 
+\index{ListView@{ListView}!getSelectedIndex@{getSelectedIndex}}
+\index{getSelectedIndex@{getSelectedIndex}!ListView@{ListView}}
+\doxysubsubsection{\texorpdfstring{getSelectedIndex()}{getSelectedIndex()}}
+{\footnotesize\ttfamily int List\+View\+::get\+Selected\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Selected Index. 
+
+\Hypertarget{classListView_a8a9b0f88b42d10442cb0fce8ac672b1f}\label{classListView_a8a9b0f88b42d10442cb0fce8ac672b1f} 
+\index{ListView@{ListView}!getSelectedItem@{getSelectedItem}}
+\index{getSelectedItem@{getSelectedItem}!ListView@{ListView}}
+\doxysubsubsection{\texorpdfstring{getSelectedItem()}{getSelectedItem()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structItem}{Item}} List\+View\+::get\+Selected\+Item (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the selected item struct. 
+
+\Hypertarget{classListView_a3b516683beb37f99827c170fb99a9cae}\label{classListView_a3b516683beb37f99827c170fb99a9cae} 
+\index{ListView@{ListView}!selectNext@{selectNext}}
+\index{selectNext@{selectNext}!ListView@{ListView}}
+\doxysubsubsection{\texorpdfstring{selectNext()}{selectNext()}}
+{\footnotesize\ttfamily void List\+View\+::select\+Next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Select next item of the list. 
+
+\Hypertarget{classListView_a1141754db4e94cc5ef825ad446ae6cb1}\label{classListView_a1141754db4e94cc5ef825ad446ae6cb1} 
+\index{ListView@{ListView}!selectPrevious@{selectPrevious}}
+\index{selectPrevious@{selectPrevious}!ListView@{ListView}}
+\doxysubsubsection{\texorpdfstring{selectPrevious()}{selectPrevious()}}
+{\footnotesize\ttfamily void List\+View\+::select\+Previous (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Select previous item of the list. 
+
+\Hypertarget{classListView_a75223249201069eaf9d24802a5193afe}\label{classListView_a75223249201069eaf9d24802a5193afe} 
+\index{ListView@{ListView}!update@{update}}
+\index{update@{update}!ListView@{ListView}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void List\+View\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Update the view. 
+
+
+
+Implements \mbox{\hyperlink{classView_a8caf26d67197c101c37da5c9cddfb534}{View}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+ui/\mbox{\hyperlink{ListView_8h}{List\+View.\+h}}\item 
+ui/\mbox{\hyperlink{ListView_8cpp}{List\+View.\+cpp}}\end{DoxyCompactItemize}

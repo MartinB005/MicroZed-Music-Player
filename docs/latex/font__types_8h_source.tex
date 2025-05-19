@@ -1,0 +1,58 @@
+\doxysection{font\+\_\+types.\+h}
+\hypertarget{font__types_8h_source}{}\label{font__types_8h_source}\index{ui/font\_types.h@{ui/font\_types.h}}
+\mbox{\hyperlink{font__types_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*******************************************************************}}
+\DoxyCodeLine{00002\ \textcolor{comment}{}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ \ font\_types.h\ \ \ \ \ \ -\/\ simple\ bitmap\ fonts\ type\ definition}}
+\DoxyCodeLine{00004\ \textcolor{comment}{}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ \ Simplified\ font\ type\ descriptor\ based\ on}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ \ Microwindows/Nano-\/X\ library\ by\ Greg\ Haerr}}
+\DoxyCodeLine{00007\ \textcolor{comment}{}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ \ \ \ https://github.com/ghaerr/microwindows}}
+\DoxyCodeLine{00009\ \textcolor{comment}{}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ \ Copyright\ (c)\ 1999,\ 2000,\ 2001,\ 2002,\ 2003,\ 2005,\ 2010,\ 2011\ Greg\ Haerr\ <greg@censoft.com>}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ \ Portions\ Copyright\ (c)\ 2002\ by\ Koninklijke\ Philips\ Electronics\ N.V.}}
+\DoxyCodeLine{00012\ \textcolor{comment}{}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ \ Simplification\ by\ Pavel\ Pisa\ for\ Czech\ Technical\ University}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ \ Computer\ Architectures\ course}}
+\DoxyCodeLine{00015\ \textcolor{comment}{}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ *******************************************************************/}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#ifndef\ FONT\_TYPES\_H}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ FONT\_TYPES\_H}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00024\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{typedef}\ uint16\_t\ \mbox{\hyperlink{font__types_8h_a9344049095dd1710da77496678b7b087}{font\_bits\_t}};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{comment}{/*\ builtin\ C-\/based\ proportional/fixed\ font\ structure*/}}
+\DoxyCodeLine{00030\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structfont__descriptor__t_a7a5f7569c87f8995fe45b207897a0327}{name}};\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ font\ name*/}}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structfont__descriptor__t_a8e21a73982523c96f1ca5f39487956a7}{maxwidth}};\ \ \ \ \ \ \ \textcolor{comment}{/*\ max\ width\ in\ pixels*/}}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \ \ \ \mbox{\hyperlink{structfont__descriptor__t_abf7d9548e4312aa8ab0b6c868c5c4ae3}{height}};\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ height\ in\ pixels*/}}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structfont__descriptor__t_af23bcc2d3e1633f8153cb92df31de704}{ascent}};\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ ascent\ (baseline)\ height*/}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structfont__descriptor__t_a9d7d7a8a663625f6fb6120cb9dc0d970}{firstchar}};\ \ \ \ \ \ \textcolor{comment}{/*\ first\ character\ in\ bitmap*/}}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structfont__descriptor__t_abe0724754ffd1eefe3933c49c534eb8a}{size}};\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ font\ size\ in\ characters*/}}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{font__types_8h_a9344049095dd1710da77496678b7b087}{font\_bits\_t}}\ *\mbox{\hyperlink{structfont__descriptor__t_a8d9fbb0fd97c708b08e7f6fe5c866fab}{bits}};\ \ \ \ \ \ \ \ \textcolor{comment}{/*\ 16-\/bit\ right-\/padded\ bitmap\ data*/}}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ uint32\_t\ \ *\mbox{\hyperlink{structfont__descriptor__t_aaf4c05aa205048a217620ca26f8c5abb}{offset}};\ \ \ \ \ \ \ \ \textcolor{comment}{/*\ offsets\ into\ bitmap\ data*/}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{structfont__descriptor__t_a15c94573c8690a0ec940e3da4c80b0b9}{width}};\ \ \ \ \ \textcolor{comment}{/*\ character\ widths\ or\ 0\ if\ fixed*/}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structfont__descriptor__t_a5bfad8f5e932dee64c856bce858f88d0}{defaultchar}};\textcolor{comment}{/*\ default\ char\ (not\ glyph\ index)*/}}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ int32\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structfont__descriptor__t_a335c226d88f77b41d82ed53d6d28c022}{bits\_size}};\ \ \ \ \ \ \textcolor{comment}{/*\ \#\ words\ of\ MWIMAGEBITS\ bits*/}}
+\DoxyCodeLine{00042\ \}\ \mbox{\hyperlink{structfont__descriptor__t}{font\_descriptor\_t}};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{structfont__descriptor__t}{font\_descriptor\_t}}\ \mbox{\hyperlink{font__types_8h_a4b3e2b838f5b62937b97e1562e34793b}{font\_winFreeSystem14x16}};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{structfont__descriptor__t}{font\_descriptor\_t}}\ \mbox{\hyperlink{font__types_8h_adc4e431c2709d14befcfe5b60bb47a19}{font\_rom8x16}};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00049\ \}\ \textcolor{comment}{/*\ extern\ "{}C"{}*/}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*FONT\_TYPES\_H*/}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

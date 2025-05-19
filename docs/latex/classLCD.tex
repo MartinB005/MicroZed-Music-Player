@@ -1,0 +1,87 @@
+\doxysection{LCD Class Reference}
+\hypertarget{classLCD}{}\label{classLCD}\index{LCD@{LCD}}
+
+
+{\ttfamily \#include $<$LCD.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classLCD_a1c9a188830514801292eb9972ef5ef36}{init}} ()
+\begin{DoxyCompactList}\small\item\em map the base memory to control the display and prepare it for write \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLCD_aa7b5af620162637591902eb52ce0a120}{set\+View}} (\mbox{\hyperlink{classView}{View}} \texorpdfstring{$\ast$}{*}view)
+\begin{DoxyCompactList}\small\item\em Set the \doxylink{classView}{View} which should be displayed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLCD_a3246fe7dd0ca87e16e19db1bc4e39c7e}{white\+Screen}} ()
+\begin{DoxyCompactList}\small\item\em show white screen on the display \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLCD_a3d6c8e6194c23cfcfe43b8ad8899689c}{update}} ()
+\begin{DoxyCompactList}\small\item\em apply written data to the display output \texorpdfstring{$\ast$}{*} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classView}{View}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classLCD_a04d2319eca380efb62cd42fb2ca4368a}{get\+Current\+View}} ()
+\item 
+int \mbox{\hyperlink{classLCD_a11cd27444eaecee2fcb33b8bc4cf6abe}{get\+Line\+Height}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classLCD_a04d2319eca380efb62cd42fb2ca4368a}\label{classLCD_a04d2319eca380efb62cd42fb2ca4368a} 
+\index{LCD@{LCD}!getCurrentView@{getCurrentView}}
+\index{getCurrentView@{getCurrentView}!LCD@{LCD}}
+\doxysubsubsection{\texorpdfstring{getCurrentView()}{getCurrentView()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classView}{View}} \texorpdfstring{$\ast$}{*} LCD\+::get\+Current\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classLCD_a11cd27444eaecee2fcb33b8bc4cf6abe}\label{classLCD_a11cd27444eaecee2fcb33b8bc4cf6abe} 
+\index{LCD@{LCD}!getLineHeight@{getLineHeight}}
+\index{getLineHeight@{getLineHeight}!LCD@{LCD}}
+\doxysubsubsection{\texorpdfstring{getLineHeight()}{getLineHeight()}}
+{\footnotesize\ttfamily int LCD\+::get\+Line\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classLCD_a1c9a188830514801292eb9972ef5ef36}\label{classLCD_a1c9a188830514801292eb9972ef5ef36} 
+\index{LCD@{LCD}!init@{init}}
+\index{init@{init}!LCD@{LCD}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void LCD\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+map the base memory to control the display and prepare it for write 
+
+\Hypertarget{classLCD_aa7b5af620162637591902eb52ce0a120}\label{classLCD_aa7b5af620162637591902eb52ce0a120} 
+\index{LCD@{LCD}!setView@{setView}}
+\index{setView@{setView}!LCD@{LCD}}
+\doxysubsubsection{\texorpdfstring{setView()}{setView()}}
+{\footnotesize\ttfamily void LCD\+::set\+View (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classView}{View}} \texorpdfstring{$\ast$}{*}}]{view }\end{DoxyParamCaption})}
+
+
+
+Set the \doxylink{classView}{View} which should be displayed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em view} & the \doxylink{classView}{View} object pointer \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classLCD_a3d6c8e6194c23cfcfe43b8ad8899689c}\label{classLCD_a3d6c8e6194c23cfcfe43b8ad8899689c} 
+\index{LCD@{LCD}!update@{update}}
+\index{update@{update}!LCD@{LCD}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void LCD\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+apply written data to the display output \texorpdfstring{$\ast$}{*} 
+
+\Hypertarget{classLCD_a3246fe7dd0ca87e16e19db1bc4e39c7e}\label{classLCD_a3246fe7dd0ca87e16e19db1bc4e39c7e} 
+\index{LCD@{LCD}!whiteScreen@{whiteScreen}}
+\index{whiteScreen@{whiteScreen}!LCD@{LCD}}
+\doxysubsubsection{\texorpdfstring{whiteScreen()}{whiteScreen()}}
+{\footnotesize\ttfamily void LCD\+::white\+Screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+show white screen on the display 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+peripherals/\mbox{\hyperlink{LCD_8h}{LCD.\+h}}\item 
+peripherals/\mbox{\hyperlink{LCD_8cpp}{LCD.\+cpp}}\end{DoxyCompactItemize}

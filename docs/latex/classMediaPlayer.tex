@@ -1,0 +1,231 @@
+\doxysection{Media\+Player Class Reference}
+\hypertarget{classMediaPlayer}{}\label{classMediaPlayer}\index{MediaPlayer@{MediaPlayer}}
+
+
+{\ttfamily \#include $<$Media\+Player.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMediaPlayer_a9fdff0baebe1903e447bf8f9b72cceac}{Media\+Player}} (std\+::string filename)
+\begin{DoxyCompactList}\small\item\em Construct a new Media Player object Prepares the Media Player to play a track. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMediaPlayer_ae6a7e3f7dbccf5bbeb413eb996a57739}{Media\+Player}} (std\+::vector$<$ std\+::string $>$ playlist)
+\begin{DoxyCompactList}\small\item\em Construct a new Media Player object Prepares the Media Player to play a list of tracks. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMediaPlayer_a8572c371301584e98f6a2cbea6f62b3c}{set\+Output}} (\mbox{\hyperlink{classDAC}{DAC}} \texorpdfstring{$\ast$}{*}dac)
+\begin{DoxyCompactList}\small\item\em Set the output for the media \doxylink{classMediaPlayer}{Media\+Player} The \doxylink{classMediaPlayer}{Media\+Player} will write audio samples to this object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMediaPlayer_a829aec030bf44603047bb544f3cfa373}{show\+Audio\+Level}} (\mbox{\hyperlink{classVUMeter}{VUMeter}} \texorpdfstring{$\ast$}{*}vu\+Meter)
+\begin{DoxyCompactList}\small\item\em Set the visual output for the \doxylink{classMediaPlayer}{Media\+Player} The \doxylink{classMediaPlayer}{Media\+Player} will update the output on each sample. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMediaPlayer_a5eaf62ecbb3bbee18239bd007f38b584}{set\+Volume}} (double volume)
+\begin{DoxyCompactList}\small\item\em Set the volume of the \doxylink{classMediaPlayer}{Media\+Player}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMediaPlayer_afd8a5aab3d63cbd5e23990d4207da472}{set\+On\+Position\+Update}} (std\+::function$<$ void(int)$>$ func)
+\begin{DoxyCompactList}\small\item\em Set the callback when track position is changed Useful for seekbars and elapsed time view. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classMediaPlayer_add9b762ab29bf81f374f0ab85145ff86}{get\+Volume}} ()
+\item 
+bool \mbox{\hyperlink{classMediaPlayer_a1a0c1276e6c3d5954dc80a00787e8568}{is\+Playing}} ()
+\item 
+std\+::string \mbox{\hyperlink{classMediaPlayer_a76a3ed2c2021ec65079cc7a23aa1d6fc}{get\+Track\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Get the Track Name object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMediaPlayer_a64c608f3b47cafae19ec60c9435df099}{play}} ()
+\begin{DoxyCompactList}\small\item\em start playing the prepared track \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMediaPlayer_a167c8a978e2f11b002f6cb757117ed04}{play}} (int track\+Number)
+\begin{DoxyCompactList}\small\item\em start playing the track on certain position in the playlist \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMediaPlayer_a601ab3d93244e06da5fff56f4373d039}{next\+Track}} ()
+\begin{DoxyCompactList}\small\item\em stop the current track and start playing the next track in the playlist \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMediaPlayer_a24af9993f26c362fe12e2be55679275d}{previous\+Track}} ()
+\begin{DoxyCompactList}\small\item\em stop the current track and start playing the previous track in the playlist \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMediaPlayer_a790f3b46f3961771fe67ce57591eb9d1}{pause}} ()
+\begin{DoxyCompactList}\small\item\em pause the current playing track \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMediaPlayer_a34a38724c55c67644c9a4ee6844d71a2}{stop}} ()
+\begin{DoxyCompactList}\small\item\em stop the current playing track and terminate all \doxylink{classMediaPlayer}{Media\+Player} executing actions \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classMediaPlayer_a9fdff0baebe1903e447bf8f9b72cceac}\label{classMediaPlayer_a9fdff0baebe1903e447bf8f9b72cceac} 
+\index{MediaPlayer@{MediaPlayer}!MediaPlayer@{MediaPlayer}}
+\index{MediaPlayer@{MediaPlayer}!MediaPlayer@{MediaPlayer}}
+\doxysubsubsection{\texorpdfstring{MediaPlayer()}{MediaPlayer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Media\+Player\+::\+Media\+Player (\begin{DoxyParamCaption}\item[{std\+::string}]{filename }\end{DoxyParamCaption})}
+
+
+
+Construct a new Media Player object Prepares the Media Player to play a track. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & which file should be played\\
+\hline
+\end{DoxyParams}
+Supported formats\+: MPEG Layer III (MP3) and PCM 16-\/bit 2-\/channel WAV \Hypertarget{classMediaPlayer_ae6a7e3f7dbccf5bbeb413eb996a57739}\label{classMediaPlayer_ae6a7e3f7dbccf5bbeb413eb996a57739} 
+\index{MediaPlayer@{MediaPlayer}!MediaPlayer@{MediaPlayer}}
+\index{MediaPlayer@{MediaPlayer}!MediaPlayer@{MediaPlayer}}
+\doxysubsubsection{\texorpdfstring{MediaPlayer()}{MediaPlayer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Media\+Player\+::\+Media\+Player (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$}]{playlist }\end{DoxyParamCaption})}
+
+
+
+Construct a new Media Player object Prepares the Media Player to play a list of tracks. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em playlist} & list of filenames\\
+\hline
+\end{DoxyParams}
+Supported formats\+: MPEG Layer III (MP3) and PCM 16-\/bit 2-\/channel WAV 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classMediaPlayer_a76a3ed2c2021ec65079cc7a23aa1d6fc}\label{classMediaPlayer_a76a3ed2c2021ec65079cc7a23aa1d6fc} 
+\index{MediaPlayer@{MediaPlayer}!getTrackName@{getTrackName}}
+\index{getTrackName@{getTrackName}!MediaPlayer@{MediaPlayer}}
+\doxysubsubsection{\texorpdfstring{getTrackName()}{getTrackName()}}
+{\footnotesize\ttfamily std\+::string Media\+Player\+::get\+Track\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Track Name object. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string the name of the currently playing track 
+\end{DoxyReturn}
+\Hypertarget{classMediaPlayer_add9b762ab29bf81f374f0ab85145ff86}\label{classMediaPlayer_add9b762ab29bf81f374f0ab85145ff86} 
+\index{MediaPlayer@{MediaPlayer}!getVolume@{getVolume}}
+\index{getVolume@{getVolume}!MediaPlayer@{MediaPlayer}}
+\doxysubsubsection{\texorpdfstring{getVolume()}{getVolume()}}
+{\footnotesize\ttfamily double Media\+Player\+::get\+Volume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classMediaPlayer_a1a0c1276e6c3d5954dc80a00787e8568}\label{classMediaPlayer_a1a0c1276e6c3d5954dc80a00787e8568} 
+\index{MediaPlayer@{MediaPlayer}!isPlaying@{isPlaying}}
+\index{isPlaying@{isPlaying}!MediaPlayer@{MediaPlayer}}
+\doxysubsubsection{\texorpdfstring{isPlaying()}{isPlaying()}}
+{\footnotesize\ttfamily bool Media\+Player\+::is\+Playing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classMediaPlayer_a601ab3d93244e06da5fff56f4373d039}\label{classMediaPlayer_a601ab3d93244e06da5fff56f4373d039} 
+\index{MediaPlayer@{MediaPlayer}!nextTrack@{nextTrack}}
+\index{nextTrack@{nextTrack}!MediaPlayer@{MediaPlayer}}
+\doxysubsubsection{\texorpdfstring{nextTrack()}{nextTrack()}}
+{\footnotesize\ttfamily void Media\+Player\+::next\+Track (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+stop the current track and start playing the next track in the playlist 
+
+\Hypertarget{classMediaPlayer_a790f3b46f3961771fe67ce57591eb9d1}\label{classMediaPlayer_a790f3b46f3961771fe67ce57591eb9d1} 
+\index{MediaPlayer@{MediaPlayer}!pause@{pause}}
+\index{pause@{pause}!MediaPlayer@{MediaPlayer}}
+\doxysubsubsection{\texorpdfstring{pause()}{pause()}}
+{\footnotesize\ttfamily void Media\+Player\+::pause (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+pause the current playing track 
+
+\Hypertarget{classMediaPlayer_a64c608f3b47cafae19ec60c9435df099}\label{classMediaPlayer_a64c608f3b47cafae19ec60c9435df099} 
+\index{MediaPlayer@{MediaPlayer}!play@{play}}
+\index{play@{play}!MediaPlayer@{MediaPlayer}}
+\doxysubsubsection{\texorpdfstring{play()}{play()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Media\+Player\+::play (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+start playing the prepared track 
+
+\Hypertarget{classMediaPlayer_a167c8a978e2f11b002f6cb757117ed04}\label{classMediaPlayer_a167c8a978e2f11b002f6cb757117ed04} 
+\index{MediaPlayer@{MediaPlayer}!play@{play}}
+\index{play@{play}!MediaPlayer@{MediaPlayer}}
+\doxysubsubsection{\texorpdfstring{play()}{play()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Media\+Player\+::play (\begin{DoxyParamCaption}\item[{int}]{track\+Number }\end{DoxyParamCaption})}
+
+
+
+start playing the track on certain position in the playlist 
+
+
+\begin{DoxyParams}{Parameters}
+{\em track\+Number} & the index of the track in the playlist \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classMediaPlayer_a24af9993f26c362fe12e2be55679275d}\label{classMediaPlayer_a24af9993f26c362fe12e2be55679275d} 
+\index{MediaPlayer@{MediaPlayer}!previousTrack@{previousTrack}}
+\index{previousTrack@{previousTrack}!MediaPlayer@{MediaPlayer}}
+\doxysubsubsection{\texorpdfstring{previousTrack()}{previousTrack()}}
+{\footnotesize\ttfamily void Media\+Player\+::previous\+Track (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+stop the current track and start playing the previous track in the playlist 
+
+\Hypertarget{classMediaPlayer_afd8a5aab3d63cbd5e23990d4207da472}\label{classMediaPlayer_afd8a5aab3d63cbd5e23990d4207da472} 
+\index{MediaPlayer@{MediaPlayer}!setOnPositionUpdate@{setOnPositionUpdate}}
+\index{setOnPositionUpdate@{setOnPositionUpdate}!MediaPlayer@{MediaPlayer}}
+\doxysubsubsection{\texorpdfstring{setOnPositionUpdate()}{setOnPositionUpdate()}}
+{\footnotesize\ttfamily void Media\+Player\+::set\+On\+Position\+Update (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(int)$>$}]{func }\end{DoxyParamCaption})}
+
+
+
+Set the callback when track position is changed Useful for seekbars and elapsed time view. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em func} & callback \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classMediaPlayer_a8572c371301584e98f6a2cbea6f62b3c}\label{classMediaPlayer_a8572c371301584e98f6a2cbea6f62b3c} 
+\index{MediaPlayer@{MediaPlayer}!setOutput@{setOutput}}
+\index{setOutput@{setOutput}!MediaPlayer@{MediaPlayer}}
+\doxysubsubsection{\texorpdfstring{setOutput()}{setOutput()}}
+{\footnotesize\ttfamily void Media\+Player\+::set\+Output (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDAC}{DAC}} \texorpdfstring{$\ast$}{*}}]{dac }\end{DoxyParamCaption})}
+
+
+
+Set the output for the media \doxylink{classMediaPlayer}{Media\+Player} The \doxylink{classMediaPlayer}{Media\+Player} will write audio samples to this object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dac} & DA Converter object for generating audio output \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classMediaPlayer_a5eaf62ecbb3bbee18239bd007f38b584}\label{classMediaPlayer_a5eaf62ecbb3bbee18239bd007f38b584} 
+\index{MediaPlayer@{MediaPlayer}!setVolume@{setVolume}}
+\index{setVolume@{setVolume}!MediaPlayer@{MediaPlayer}}
+\doxysubsubsection{\texorpdfstring{setVolume()}{setVolume()}}
+{\footnotesize\ttfamily void Media\+Player\+::set\+Volume (\begin{DoxyParamCaption}\item[{double}]{volume }\end{DoxyParamCaption})}
+
+
+
+Set the volume of the \doxylink{classMediaPlayer}{Media\+Player}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em volume} & value between 0 and 1 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classMediaPlayer_a829aec030bf44603047bb544f3cfa373}\label{classMediaPlayer_a829aec030bf44603047bb544f3cfa373} 
+\index{MediaPlayer@{MediaPlayer}!showAudioLevel@{showAudioLevel}}
+\index{showAudioLevel@{showAudioLevel}!MediaPlayer@{MediaPlayer}}
+\doxysubsubsection{\texorpdfstring{showAudioLevel()}{showAudioLevel()}}
+{\footnotesize\ttfamily void Media\+Player\+::show\+Audio\+Level (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVUMeter}{VUMeter}} \texorpdfstring{$\ast$}{*}}]{vu\+Meter }\end{DoxyParamCaption})}
+
+
+
+Set the visual output for the \doxylink{classMediaPlayer}{Media\+Player} The \doxylink{classMediaPlayer}{Media\+Player} will update the output on each sample. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vu\+Meter} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classMediaPlayer_a34a38724c55c67644c9a4ee6844d71a2}\label{classMediaPlayer_a34a38724c55c67644c9a4ee6844d71a2} 
+\index{MediaPlayer@{MediaPlayer}!stop@{stop}}
+\index{stop@{stop}!MediaPlayer@{MediaPlayer}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void Media\+Player\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+stop the current playing track and terminate all \doxylink{classMediaPlayer}{Media\+Player} executing actions 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+audio/\mbox{\hyperlink{MediaPlayer_8h}{Media\+Player.\+h}}\item 
+audio/\mbox{\hyperlink{MediaPlayer_8cpp}{Media\+Player.\+cpp}}\end{DoxyCompactItemize}

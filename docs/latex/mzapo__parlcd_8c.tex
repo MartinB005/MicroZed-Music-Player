@@ -1,0 +1,92 @@
+\doxysection{core/mzapo\+\_\+parlcd.c File Reference}
+\hypertarget{mzapo__parlcd_8c}{}\label{mzapo__parlcd_8c}\index{core/mzapo\_parlcd.c@{core/mzapo\_parlcd.c}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include "{}mzapo\+\_\+parlcd.\+h"{}}\newline
+{\ttfamily \#include "{}mzapo\+\_\+regs.\+h"{}}\newline
+Include dependency graph for mzapo\+\_\+parlcd.\+c\+:
+% FIG 0
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{mzapo__parlcd_8c_a3024ccd4a9af5109d24e6c57565d74a1}{\+\_\+\+POSIX\+\_\+\+C\+\_\+\+SOURCE}}~200112L
+\item 
+\#define \mbox{\hyperlink{mzapo__parlcd_8c_a6fbd476393eb9c6098c0eb905c9d9efc}{HX8357\+\_\+B}}
+\item 
+\#define \mbox{\hyperlink{mzapo__parlcd_8c_ad9194cc9559b4f8f0843047b82f7fd31}{ILI9481}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{mzapo__parlcd_8c_add303eeaf9fa3e336750f4ba39a69932}{parlcd\+\_\+write\+\_\+cr}} (unsigned char \texorpdfstring{$\ast$}{*}parlcd\+\_\+mem\+\_\+base, uint16\+\_\+t data)
+\item 
+void \mbox{\hyperlink{mzapo__parlcd_8c_ab30b1b616caf5991cd8e1a6a52ba23e7}{parlcd\+\_\+write\+\_\+cmd}} (unsigned char \texorpdfstring{$\ast$}{*}parlcd\+\_\+mem\+\_\+base, uint16\+\_\+t cmd)
+\item 
+void \mbox{\hyperlink{mzapo__parlcd_8c_ab9125a7610ba0302c004802fb908590d}{parlcd\+\_\+write\+\_\+data}} (unsigned char \texorpdfstring{$\ast$}{*}parlcd\+\_\+mem\+\_\+base, uint16\+\_\+t data)
+\item 
+void \mbox{\hyperlink{mzapo__parlcd_8c_a688f82186392823303897ee3f270718a}{parlcd\+\_\+write\+\_\+data2x}} (unsigned char \texorpdfstring{$\ast$}{*}parlcd\+\_\+mem\+\_\+base, uint32\+\_\+t data)
+\item 
+void \mbox{\hyperlink{mzapo__parlcd_8c_afef12925f598e36664d1d3b6de27c881}{parlcd\+\_\+delay}} (int msec)
+\item 
+void \mbox{\hyperlink{mzapo__parlcd_8c_a37a4ee10b3cd7f3b1282d944f70c591b}{parlcd\+\_\+hx8357\+\_\+init}} (unsigned char \texorpdfstring{$\ast$}{*}parlcd\+\_\+mem\+\_\+base)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{mzapo__parlcd_8c_a3024ccd4a9af5109d24e6c57565d74a1}\label{mzapo__parlcd_8c_a3024ccd4a9af5109d24e6c57565d74a1} 
+\index{mzapo\_parlcd.c@{mzapo\_parlcd.c}!\_POSIX\_C\_SOURCE@{\_POSIX\_C\_SOURCE}}
+\index{\_POSIX\_C\_SOURCE@{\_POSIX\_C\_SOURCE}!mzapo\_parlcd.c@{mzapo\_parlcd.c}}
+\doxysubsubsection{\texorpdfstring{\_POSIX\_C\_SOURCE}{\_POSIX\_C\_SOURCE}}
+{\footnotesize\ttfamily \#define \+\_\+\+POSIX\+\_\+\+C\+\_\+\+SOURCE~200112L}
+
+\Hypertarget{mzapo__parlcd_8c_a6fbd476393eb9c6098c0eb905c9d9efc}\label{mzapo__parlcd_8c_a6fbd476393eb9c6098c0eb905c9d9efc} 
+\index{mzapo\_parlcd.c@{mzapo\_parlcd.c}!HX8357\_B@{HX8357\_B}}
+\index{HX8357\_B@{HX8357\_B}!mzapo\_parlcd.c@{mzapo\_parlcd.c}}
+\doxysubsubsection{\texorpdfstring{HX8357\_B}{HX8357\_B}}
+{\footnotesize\ttfamily \#define HX8357\+\_\+B}
+
+\Hypertarget{mzapo__parlcd_8c_ad9194cc9559b4f8f0843047b82f7fd31}\label{mzapo__parlcd_8c_ad9194cc9559b4f8f0843047b82f7fd31} 
+\index{mzapo\_parlcd.c@{mzapo\_parlcd.c}!ILI9481@{ILI9481}}
+\index{ILI9481@{ILI9481}!mzapo\_parlcd.c@{mzapo\_parlcd.c}}
+\doxysubsubsection{\texorpdfstring{ILI9481}{ILI9481}}
+{\footnotesize\ttfamily \#define ILI9481}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{mzapo__parlcd_8c_afef12925f598e36664d1d3b6de27c881}\label{mzapo__parlcd_8c_afef12925f598e36664d1d3b6de27c881} 
+\index{mzapo\_parlcd.c@{mzapo\_parlcd.c}!parlcd\_delay@{parlcd\_delay}}
+\index{parlcd\_delay@{parlcd\_delay}!mzapo\_parlcd.c@{mzapo\_parlcd.c}}
+\doxysubsubsection{\texorpdfstring{parlcd\_delay()}{parlcd\_delay()}}
+{\footnotesize\ttfamily void parlcd\+\_\+delay (\begin{DoxyParamCaption}\item[{int}]{msec }\end{DoxyParamCaption})}
+
+\Hypertarget{mzapo__parlcd_8c_a37a4ee10b3cd7f3b1282d944f70c591b}\label{mzapo__parlcd_8c_a37a4ee10b3cd7f3b1282d944f70c591b} 
+\index{mzapo\_parlcd.c@{mzapo\_parlcd.c}!parlcd\_hx8357\_init@{parlcd\_hx8357\_init}}
+\index{parlcd\_hx8357\_init@{parlcd\_hx8357\_init}!mzapo\_parlcd.c@{mzapo\_parlcd.c}}
+\doxysubsubsection{\texorpdfstring{parlcd\_hx8357\_init()}{parlcd\_hx8357\_init()}}
+{\footnotesize\ttfamily void parlcd\+\_\+hx8357\+\_\+init (\begin{DoxyParamCaption}\item[{unsigned char \texorpdfstring{$\ast$}{*}}]{parlcd\+\_\+mem\+\_\+base }\end{DoxyParamCaption})}
+
+\Hypertarget{mzapo__parlcd_8c_ab30b1b616caf5991cd8e1a6a52ba23e7}\label{mzapo__parlcd_8c_ab30b1b616caf5991cd8e1a6a52ba23e7} 
+\index{mzapo\_parlcd.c@{mzapo\_parlcd.c}!parlcd\_write\_cmd@{parlcd\_write\_cmd}}
+\index{parlcd\_write\_cmd@{parlcd\_write\_cmd}!mzapo\_parlcd.c@{mzapo\_parlcd.c}}
+\doxysubsubsection{\texorpdfstring{parlcd\_write\_cmd()}{parlcd\_write\_cmd()}}
+{\footnotesize\ttfamily void parlcd\+\_\+write\+\_\+cmd (\begin{DoxyParamCaption}\item[{unsigned char \texorpdfstring{$\ast$}{*}}]{parlcd\+\_\+mem\+\_\+base,  }\item[{uint16\+\_\+t}]{cmd }\end{DoxyParamCaption})}
+
+\Hypertarget{mzapo__parlcd_8c_add303eeaf9fa3e336750f4ba39a69932}\label{mzapo__parlcd_8c_add303eeaf9fa3e336750f4ba39a69932} 
+\index{mzapo\_parlcd.c@{mzapo\_parlcd.c}!parlcd\_write\_cr@{parlcd\_write\_cr}}
+\index{parlcd\_write\_cr@{parlcd\_write\_cr}!mzapo\_parlcd.c@{mzapo\_parlcd.c}}
+\doxysubsubsection{\texorpdfstring{parlcd\_write\_cr()}{parlcd\_write\_cr()}}
+{\footnotesize\ttfamily void parlcd\+\_\+write\+\_\+cr (\begin{DoxyParamCaption}\item[{unsigned char \texorpdfstring{$\ast$}{*}}]{parlcd\+\_\+mem\+\_\+base,  }\item[{uint16\+\_\+t}]{data }\end{DoxyParamCaption})}
+
+\Hypertarget{mzapo__parlcd_8c_ab9125a7610ba0302c004802fb908590d}\label{mzapo__parlcd_8c_ab9125a7610ba0302c004802fb908590d} 
+\index{mzapo\_parlcd.c@{mzapo\_parlcd.c}!parlcd\_write\_data@{parlcd\_write\_data}}
+\index{parlcd\_write\_data@{parlcd\_write\_data}!mzapo\_parlcd.c@{mzapo\_parlcd.c}}
+\doxysubsubsection{\texorpdfstring{parlcd\_write\_data()}{parlcd\_write\_data()}}
+{\footnotesize\ttfamily void parlcd\+\_\+write\+\_\+data (\begin{DoxyParamCaption}\item[{unsigned char \texorpdfstring{$\ast$}{*}}]{parlcd\+\_\+mem\+\_\+base,  }\item[{uint16\+\_\+t}]{data }\end{DoxyParamCaption})}
+
+\Hypertarget{mzapo__parlcd_8c_a688f82186392823303897ee3f270718a}\label{mzapo__parlcd_8c_a688f82186392823303897ee3f270718a} 
+\index{mzapo\_parlcd.c@{mzapo\_parlcd.c}!parlcd\_write\_data2x@{parlcd\_write\_data2x}}
+\index{parlcd\_write\_data2x@{parlcd\_write\_data2x}!mzapo\_parlcd.c@{mzapo\_parlcd.c}}
+\doxysubsubsection{\texorpdfstring{parlcd\_write\_data2x()}{parlcd\_write\_data2x()}}
+{\footnotesize\ttfamily void parlcd\+\_\+write\+\_\+data2x (\begin{DoxyParamCaption}\item[{unsigned char \texorpdfstring{$\ast$}{*}}]{parlcd\+\_\+mem\+\_\+base,  }\item[{uint32\+\_\+t}]{data }\end{DoxyParamCaption})}
+

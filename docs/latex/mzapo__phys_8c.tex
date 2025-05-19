@@ -1,0 +1,53 @@
+\doxysection{core/mzapo\+\_\+phys.c File Reference}
+\hypertarget{mzapo__phys_8c}{}\label{mzapo__phys_8c}\index{core/mzapo\_phys.c@{core/mzapo\_phys.c}}
+{\ttfamily \#include $<$sys/types.\+h$>$}\newline
+{\ttfamily \#include $<$sys/stat.\+h$>$}\newline
+{\ttfamily \#include $<$sys/mman.\+h$>$}\newline
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include "{}mzapo\+\_\+phys.\+h"{}}\newline
+Include dependency graph for mzapo\+\_\+phys.\+c\+:
+% FIG 0
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{mzapo__phys_8c_a3024ccd4a9af5109d24e6c57565d74a1}{\+\_\+\+POSIX\+\_\+\+C\+\_\+\+SOURCE}}~200112L
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{mzapo__phys_8c_aac445a68fb584e6a2b0bc038d9eed8f6}{map\+\_\+phys\+\_\+address}} (off\+\_\+t region\+\_\+base, size\+\_\+t region\+\_\+size, int opt\+\_\+cached)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{mzapo__phys_8c_a817f2c47e0b9290c9d64751b49354c83}{map\+\_\+phys\+\_\+memdev}} ="{}/dev/mem"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{mzapo__phys_8c_a3024ccd4a9af5109d24e6c57565d74a1}\label{mzapo__phys_8c_a3024ccd4a9af5109d24e6c57565d74a1} 
+\index{mzapo\_phys.c@{mzapo\_phys.c}!\_POSIX\_C\_SOURCE@{\_POSIX\_C\_SOURCE}}
+\index{\_POSIX\_C\_SOURCE@{\_POSIX\_C\_SOURCE}!mzapo\_phys.c@{mzapo\_phys.c}}
+\doxysubsubsection{\texorpdfstring{\_POSIX\_C\_SOURCE}{\_POSIX\_C\_SOURCE}}
+{\footnotesize\ttfamily \#define \+\_\+\+POSIX\+\_\+\+C\+\_\+\+SOURCE~200112L}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{mzapo__phys_8c_aac445a68fb584e6a2b0bc038d9eed8f6}\label{mzapo__phys_8c_aac445a68fb584e6a2b0bc038d9eed8f6} 
+\index{mzapo\_phys.c@{mzapo\_phys.c}!map\_phys\_address@{map\_phys\_address}}
+\index{map\_phys\_address@{map\_phys\_address}!mzapo\_phys.c@{mzapo\_phys.c}}
+\doxysubsubsection{\texorpdfstring{map\_phys\_address()}{map\_phys\_address()}}
+{\footnotesize\ttfamily void \texorpdfstring{$\ast$}{*} map\+\_\+phys\+\_\+address (\begin{DoxyParamCaption}\item[{off\+\_\+t}]{region\+\_\+base,  }\item[{size\+\_\+t}]{region\+\_\+size,  }\item[{int}]{opt\+\_\+cached }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{mzapo__phys_8c_a817f2c47e0b9290c9d64751b49354c83}\label{mzapo__phys_8c_a817f2c47e0b9290c9d64751b49354c83} 
+\index{mzapo\_phys.c@{mzapo\_phys.c}!map\_phys\_memdev@{map\_phys\_memdev}}
+\index{map\_phys\_memdev@{map\_phys\_memdev}!mzapo\_phys.c@{mzapo\_phys.c}}
+\doxysubsubsection{\texorpdfstring{map\_phys\_memdev}{map\_phys\_memdev}}
+{\footnotesize\ttfamily const char\texorpdfstring{$\ast$}{*} map\+\_\+phys\+\_\+memdev ="{}/dev/mem"{}}
+

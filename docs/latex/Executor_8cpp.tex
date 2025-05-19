@@ -1,0 +1,58 @@
+\doxysection{utils/\+Executor.cpp File Reference}
+\hypertarget{Executor_8cpp}{}\label{Executor_8cpp}\index{utils/Executor.cpp@{utils/Executor.cpp}}
+{\ttfamily \#include $<$pthread.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include "{}Executor.\+h"{}}\newline
+Include dependency graph for Executor.\+cpp\+:
+% FIG 0
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structActionArgs}{Action\+Args}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{Executor_8cpp_ab99048c633933c92e0c1661e143047a3}{timer\+\_\+thread}} (void \texorpdfstring{$\ast$}{*}arg)
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{Executor_8cpp_ab8927fa07ea57c7e016559f208aed546}{run}} (void \texorpdfstring{$\ast$}{*}arg)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+volatile bool \mbox{\hyperlink{Executor_8cpp_a7c10027ca174fc9d529796f04aca6bd4}{running}}
+\item 
+volatile int \mbox{\hyperlink{Executor_8cpp_a3d4f497af9a194d9e03e5d9a9b0ee67d}{counter}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{Executor_8cpp_ab8927fa07ea57c7e016559f208aed546}\label{Executor_8cpp_ab8927fa07ea57c7e016559f208aed546} 
+\index{Executor.cpp@{Executor.cpp}!run@{run}}
+\index{run@{run}!Executor.cpp@{Executor.cpp}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void \texorpdfstring{$\ast$}{*} run (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{arg }\end{DoxyParamCaption})}
+
+\Hypertarget{Executor_8cpp_ab99048c633933c92e0c1661e143047a3}\label{Executor_8cpp_ab99048c633933c92e0c1661e143047a3} 
+\index{Executor.cpp@{Executor.cpp}!timer\_thread@{timer\_thread}}
+\index{timer\_thread@{timer\_thread}!Executor.cpp@{Executor.cpp}}
+\doxysubsubsection{\texorpdfstring{timer\_thread()}{timer\_thread()}}
+{\footnotesize\ttfamily void \texorpdfstring{$\ast$}{*} timer\+\_\+thread (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{arg }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{Executor_8cpp_a3d4f497af9a194d9e03e5d9a9b0ee67d}\label{Executor_8cpp_a3d4f497af9a194d9e03e5d9a9b0ee67d} 
+\index{Executor.cpp@{Executor.cpp}!counter@{counter}}
+\index{counter@{counter}!Executor.cpp@{Executor.cpp}}
+\doxysubsubsection{\texorpdfstring{counter}{counter}}
+{\footnotesize\ttfamily volatile int counter}
+
+\Hypertarget{Executor_8cpp_a7c10027ca174fc9d529796f04aca6bd4}\label{Executor_8cpp_a7c10027ca174fc9d529796f04aca6bd4} 
+\index{Executor.cpp@{Executor.cpp}!running@{running}}
+\index{running@{running}!Executor.cpp@{Executor.cpp}}
+\doxysubsubsection{\texorpdfstring{running}{running}}
+{\footnotesize\ttfamily volatile bool running}
+
