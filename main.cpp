@@ -10,8 +10,6 @@
 #include "peripherals/Encoders.h"
 #include "ui/Application.h"
 
-
-
 int main(int argc, char *argv[]) {
   unsigned char *mem_base;
   uint32_t val_line=5;
