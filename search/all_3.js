@@ -12,8 +12,8 @@ var searchData=
   ['colors_2eh_9',['colors.h',['../colors_8h.html',1,'']]],
   ['controls_5fscale_10',['CONTROLS_SCALE',['../PlayingView_8cpp.html#ac7484e46cefdbdfb8251e46aaad05466',1,'PlayingView.cpp']]],
   ['controls_5fy_11',['CONTROLS_Y',['../PlayingView_8cpp.html#a7737bb0a9786a7f42569800b0b2c0ad1',1,'PlayingView.cpp']]],
-  ['converter_12',['DA Converter',['../index.html#autotoc_md13',1,'']]],
-  ['core_20tt_13',['&lt;tt&gt;core/&lt;/tt&gt;',['../md_docs_2tech__docs.html#autotoc_md5',1,'']]],
+  ['converter_12',['DA Converter',['../index.html#autotoc_md15',1,'']]],
+  ['core_20tt_13',['&lt;tt&gt;core/&lt;/tt&gt;',['../md_docs_2tech__docs.html#autotoc_md6',1,'']]],
   ['counter_14',['counter',['../Executor_8cpp.html#a3d4f497af9a194d9e03e5d9a9b0ee67d',1,'Executor.cpp']]],
   ['cur_5fsample_15',['cur_sample',['../structmp3dec__ex__t.html#a028bbd1ac0bb11138c8e0ba11e38eadb',1,'mp3dec_ex_t']]]
 ];

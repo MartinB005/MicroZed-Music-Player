@@ -58,10 +58,10 @@ var searchData=
   ['step_55',['STEP',['../Encoders_8cpp.html#a70be2dc5c8bdc85b027ea6118753cca1',1,'Encoders.cpp']]],
   ['stop_56',['stop',['../classMediaPlayer.html#a34a38724c55c67644c9a4ee6844d71a2',1,'MediaPlayer']]],
   ['stopall_57',['stopAll',['../classExecutor.html#ac79bef9eabff1e05042c0ab54e4962e5',1,'Executor']]],
-  ['structure_58',['Project Structure',['../md_docs_2tech__docs.html#autotoc_md3',1,'']]],
+  ['structure_58',['Project Structure',['../md_docs_2tech__docs.html#autotoc_md4',1,'']]],
   ['subchunk1id_59',['subchunk1ID',['../structFmtChunk.html#aeea94e297ece6412f05f4d5c27121866',1,'FmtChunk']]],
   ['subchunk1size_60',['subchunk1Size',['../structFmtChunk.html#a33e9c212b901ba8f719ec9affcc0448e',1,'FmtChunk']]],
   ['subchunk2id_61',['subchunk2ID',['../structDataChunk.html#a4eed605f49d60944bc1ff8096571c319',1,'DataChunk']]],
   ['subchunk2size_62',['subchunk2Size',['../structDataChunk.html#abea15f8fdd093d564b90c6fd454f6bb3',1,'DataChunk']]],
-  ['supported_20audio_20formats_63',['Supported Audio Formats',['../index.html#autotoc_md12',1,'']]]
+  ['supported_20audio_20formats_63',['Supported Audio Formats',['../index.html#autotoc_md14',1,'']]]
 ];

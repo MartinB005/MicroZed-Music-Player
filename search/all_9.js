@@ -10,7 +10,7 @@ var searchData=
   ['init_7',['init',['../classDAC.html#a104b8599652caeed18cb31d82276e033',1,'DAC::init()'],['../classEncoders.html#a8e17f23ab455491e48803c369e6b2130',1,'Encoders::init()'],['../classLCD.html#a1c9a188830514801292eb9972ef5ef36',1,'LCD::init()'],['../classVUMeter.html#a335bf8ab498f9944c31a16434b555354',1,'VUMeter::init()']]],
   ['input_5fconsumed_8',['input_consumed',['../structmp3dec__ex__t.html#aceffd88f33a7210f8272297836c467ba',1,'mp3dec_ex_t']]],
   ['input_5ffilled_9',['input_filled',['../structmp3dec__ex__t.html#a3ef1f3115304bd3c2ef745f3b26f0c28',1,'mp3dec_ex_t']]],
-  ['instalation_10',['Instalation',['../index.html#autotoc_md14',1,'']]],
+  ['instalation_10',['Instalation',['../index.html#autotoc_md16',1,'']]],
   ['interval_11',['interval',['../DAC_8cpp.html#a091de8e47dabaf0cbbe810824f6fb94d',1,'DAC.cpp']]],
   ['io_12',['io',['../structmp3dec__ex__t.html#a2e32856a712086490fa8167a7f99b4ae',1,'mp3dec_ex_t']]],
   ['is_5ffile_13',['is_file',['../structmp3dec__ex__t.html#ae82b3fcc75ebb41c91ba8a5c286c71f8',1,'mp3dec_ex_t']]],
