@@ -7,5 +7,6 @@ var searchData=
   ['updatescreen_4',['updateScreen',['../classView.html#a5eef577fe576d8a9aafa324f7cec2ddd',1,'View']]],
   ['updateseekbar_5',['updateSeekBar',['../classPlayingView.html#aa78487239f0607ccc0cb3d157b105d9a',1,'PlayingView']]],
   ['used_20libraries_6',['Used Libraries',['../index.html#autotoc_md17',1,'']]],
-  ['utils_20tt_7',['&lt;tt&gt;utils/&lt;/tt&gt;',['../md_docs_2tech__docs.html#autotoc_md10',1,'']]]
+  ['using_20microzed_7',['DIY Music Player using MicroZed',['../index.html',1,'']]],
+  ['utils_20tt_8',['&lt;tt&gt;utils/&lt;/tt&gt;',['../md_docs_2tech__docs.html#autotoc_md10',1,'']]]
 ];

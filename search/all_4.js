@@ -34,5 +34,6 @@ var searchData=
   ['device_31',['Target Device',['../index.html#autotoc_md13',1,'']]],
   ['directory_32',['DIRECTORY',['../icons_8h.html#ab1ff242c1144a00005c5ad1ff6837b24',1,'icons.h']]],
   ['divider_5fheight_33',['DIVIDER_HEIGHT',['../ListView_8cpp.html#a01f2273898a7606b748c2eb141ea1bd6',1,'ListView.cpp']]],
-  ['documentation_34',['Technical Documentation',['../md_docs_2tech__docs.html',1,'']]]
+  ['diy_20music_20player_20using_20microzed_34',['DIY Music Player using MicroZed',['../index.html',1,'']]],
+  ['documentation_35',['Technical Documentation',['../md_docs_2tech__docs.html',1,'']]]
 ];
