@@ -18,7 +18,7 @@ var searchData=
   ['parlcd_5fwrite_5fdata2x_15',['parlcd_write_data2x',['../mzapo__parlcd_8c.html#a688f82186392823303897ee3f270718a',1,'parlcd_write_data2x(unsigned char *parlcd_mem_base, uint32_t data):&#160;mzapo_parlcd.c'],['../mzapo__parlcd_8h.html#a688f82186392823303897ee3f270718a',1,'parlcd_write_data2x(unsigned char *parlcd_mem_base, uint32_t data):&#160;mzapo_parlcd.c']]],
   ['pause_16',['pause',['../classMediaPlayer.html#a790f3b46f3961771fe67ce57591eb9d1',1,'MediaPlayer::pause()'],['../icons_8h.html#a5666ac5930c9f903698073ab1fa694f7',1,'PAUSE:&#160;icons.h']]],
   ['play_17',['play',['../classMediaPlayer.html#a167c8a978e2f11b002f6cb757117ed04',1,'MediaPlayer::play(int trackNumber)'],['../classMediaPlayer.html#a64c608f3b47cafae19ec60c9435df099',1,'MediaPlayer::play()'],['../icons_8h.html#a34deddb3d2e1791fd7ce5acc13ffc8df',1,'PLAY:&#160;icons.h']]],
-  ['player_18',['The MicroZed Music Player',['../md_README.html',1,'']]],
+  ['player_18',['The MicroZed Music Player',['../index.html',1,'']]],
   ['playingview_19',['playingview',['../classPlayingView.html#a633293a9539eca232a63fd75b6092802',1,'PlayingView::PlayingView()'],['../classPlayingView.html',1,'PlayingView']]],
   ['playingview_2ecpp_20',['PlayingView.cpp',['../PlayingView_8cpp.html',1,'']]],
   ['playingview_2eh_21',['PlayingView.h',['../PlayingView_8h.html',1,'']]],
