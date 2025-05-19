@@ -4,5 +4,5 @@ var searchData=
   ['onlyonce_1',['onlyOnce',['../structActionArgs.html#afcdc1f3fd1772e40bbb781142717ed84',1,'ActionArgs']]],
   ['opendir_2',['openDir',['../classFileManager.html#a268a772b1c1f11e95f59c606f530c08e',1,'FileManager']]],
   ['openselectedfile_3',['openSelectedFile',['../classApplication.html#aff0277a1549b8c72bfa2cb9c3a590734',1,'Application']]],
-  ['output_4',['Audio Output',['../md_docs_2tech__docs.html#autotoc_md3',1,'']]]
+  ['output_4',['Audio Output',['../index.html#autotoc_md3',1,'']]]
 ];

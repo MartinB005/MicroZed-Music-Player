@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['using_20microzed_0',['DIY Music Player using MicroZed',['../index.html',1,'']]]
+  ['using_20microzed_0',['DIY Music Player using MicroZed',['../md_README.html',1,'']]]
 ];

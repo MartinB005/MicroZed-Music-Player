@@ -42,7 +42,7 @@ var searchData=
   ['sound_5ffile_39',['SOUND_FILE',['../FileManager_8h.html#a2c794c5c13ab4dd7e65bad031dbe41c3a4c63500d8ca5573aa023c92de5213062',1,'FileManager.h']]],
   ['speaker_40',['SPEAKER',['../icons_8h.html#a99ab171b0b50109a6d50f1b9a5e88f26',1,'icons.h']]],
   ['speaker_5fy_41',['SPEAKER_Y',['../VolumeView_8cpp.html#a04e9a412f96468cbddc827bd544f6e10',1,'VolumeView.cpp']]],
-  ['specifications_42',['Music Player Specifications',['../md_docs_2tech__docs.html#autotoc_md1',1,'']]],
+  ['specifications_42',['Music Player Specifications',['../index.html#autotoc_md1',1,'']]],
   ['spiled_5freg_5fbase_5fphys_43',['SPILED_REG_BASE_PHYS',['../mzapo__regs_8h.html#afcfd8685e0ac231c4a5930526e9b311f',1,'mzapo_regs.h']]],
   ['spiled_5freg_5fkbdrd_5fknobs_5fdirect_5fo_44',['SPILED_REG_KBDRD_KNOBS_DIRECT_o',['../mzapo__regs_8h.html#af6d1d4ce0d517dc471395671faae19c1',1,'mzapo_regs.h']]],
   ['spiled_5freg_5fknobs_5f8bit_5fo_45',['SPILED_REG_KNOBS_8BIT_o',['../mzapo__regs_8h.html#a9659b6d0a4356a769b9e8f025ab4f361',1,'mzapo_regs.h']]],
@@ -58,10 +58,10 @@ var searchData=
   ['step_55',['STEP',['../Encoders_8cpp.html#a70be2dc5c8bdc85b027ea6118753cca1',1,'Encoders.cpp']]],
   ['stop_56',['stop',['../classMediaPlayer.html#a34a38724c55c67644c9a4ee6844d71a2',1,'MediaPlayer']]],
   ['stopall_57',['stopAll',['../classExecutor.html#ac79bef9eabff1e05042c0ab54e4962e5',1,'Executor']]],
-  ['structure_58',['Project Structure',['../md_docs_2tech__docs.html#autotoc_md4',1,'']]],
+  ['structure_58',['Project Structure',['../index.html#autotoc_md4',1,'']]],
   ['subchunk1id_59',['subchunk1ID',['../structFmtChunk.html#aeea94e297ece6412f05f4d5c27121866',1,'FmtChunk']]],
   ['subchunk1size_60',['subchunk1Size',['../structFmtChunk.html#a33e9c212b901ba8f719ec9affcc0448e',1,'FmtChunk']]],
   ['subchunk2id_61',['subchunk2ID',['../structDataChunk.html#a4eed605f49d60944bc1ff8096571c319',1,'DataChunk']]],
   ['subchunk2size_62',['subchunk2Size',['../structDataChunk.html#abea15f8fdd093d564b90c6fd454f6bb3',1,'DataChunk']]],
-  ['supported_20audio_20formats_63',['Supported Audio Formats',['../index.html#autotoc_md14',1,'']]]
+  ['supported_20audio_20formats_63',['Supported Audio Formats',['../md_README.html#autotoc_md14',1,'']]]
 ];

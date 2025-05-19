@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MicroZed Music Player: DIY Music Player using MicroZed</title>
+<title>MicroZed Music Player: Technical Documentation</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -69,53 +69,84 @@ $(function() {
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">DIY Music Player using MicroZed </div></div>
+  <div class="headertitle"><div class="title">Technical Documentation </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="md_README"></a> This is low-level music player written in C/C++ with custom DA Converter as an audio output. It includes simple GUI with file browser and playing controls, which is rendering on 320 x 480 <a class="el" href="classLCD.html">LCD</a>. It is controlled by rotary encoders. Current audio level is shown by 32-LED line. See full code documentation <a href="https://martinb005.github.io/MicroZed-Music-Player/annotated.html">here</a>.</p>
-<h1><a class="anchor" id="autotoc_md13"></a>
-Target Device</h1>
-<ul>
-<li>MICROZED EVALUATION KIT ADSAES-Z7MB-7Z010-G</li>
-<li>CPU: Dual ARM® Cortex™-A9 MPCore™ @ 866 MHz (NEON™ &amp; Single / Double Precision Floating Point)</li>
-<li>Operating system: GNU/Linux</li>
-<li>Development kit MicroZed APO (<a href="https://gitlab.com/pikron/projects/mz_apo/microzed_apo">https://gitlab.com/pikron/projects/mz_apo/microzed_apo</a>)</li>
-</ul>
-<h1><a class="anchor" id="autotoc_md14"></a>
-Supported Audio Formats</h1>
+<div class="textblock"><p><a class="anchor" id="md_docs_2tech__docs"></a> </p>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Music Player Specifications</h1>
+<h2><a class="anchor" id="autotoc_md2"></a>
+Audio File Format</h2>
 <ul>
 <li>16-bit PCM WAV, stereo (2-channel), uncompressed</li>
 <li>MPEG-1 Layer III (MP3), stereo, lossy compression</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md15"></a>
-DA Converter</h1>
+<h2><a class="anchor" id="autotoc_md3"></a>
+Audio Output</h2>
 <ul>
-<li>10-bit R2R digital to analog converter with LM386 amplifier</li>
-<li>2x 74HC595 shift register</li>
-<li>Jack 3.5 mm and terminal block for speaker</li>
-<li>See <a href="dac-design/dac.sch">dac.sch</a> and <a href="dac-design/dac.brd">dac.brd</a></li>
+<li>10-bit PCM mono audio generated via an R-2R resistor ladder <a class="el" href="classDAC.html">DAC</a></li>
+<li>digital input provided through 74HC595 shift registers</li>
+<li>used LM386 amplifier to boost the signal</li>
+<li>analog output available via jack 3.5 mm &amp; terminal block for speaker</li>
 </ul>
-<p>Current implementation uses 3 GPIO pins and 2 shift registers (see <a href="peripherals/DAC.cpp">DAC.cpp</a> and <a href="core/mzapo_regs.h">mzapo_regs.h</a> where are adresses of mapped pins). It is possible to do it without shift registers, if you have 10 free GPIO-s.</p>
-<h1><a class="anchor" id="autotoc_md16"></a>
-Instalation</h1>
-<div class="fragment"><div class="line"># clone the repo</div>
-<div class="line">git clone https://github.com/MartinB005/MicroZed-Music-Player.git</div>
-<div class="line"> </div>
-<div class="line"># Navigate to the directory</div>
-<div class="line">cd MicroZed-Music-Player</div>
-<div class="line"> </div>
-<div class="line"># Edit your local IP address in Makefile</div>
-<div class="line">TARGET_IP ?= xxx.xxx.xxx.xxx</div>
-<div class="line"> </div>
-<div class="line"># compile and run the program</div>
-<div class="line">make run</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md17"></a>
-Used Libraries</h1>
-<p>MP3 decoding: <a href="https://github.com/lieff/minimp3">https://github.com/lieff/minimp3</a></p>
-<h1><a class="anchor" id="autotoc_md18"></a>
-Demonstration Videos</h1>
-<p><a href="https://github.com/user-attachments/assets/9bd06672-fdcf-4da8-a37d-1d057ed24d74">https://github.com/user-attachments/assets/9bd06672-fdcf-4da8-a37d-1d057ed24d74</a></p>
-<p><a href="https://github.com/user-attachments/assets/56f21344-d6c7-4b53-9a67-5a15862af7fc">https://github.com/user-attachments/assets/56f21344-d6c7-4b53-9a67-5a15862af7fc</a> </p>
+<h1><a class="anchor" id="autotoc_md4"></a>
+Project Structure</h1>
+<p>Project is written in C/C++ and object-oriented. Its code is organized into several folders.</p><ul>
+<li><code><a class="el" href="main_8cpp.html">main.cpp</a></code> - entry point to zhe application, handles encoders actions</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md5"></a>
+&lt;tt&gt;audio/&lt;/tt&gt;</h2>
+<ul>
+<li>contains classes for core audio handling</li>
+<li><code><a class="el" href="MediaPlayer_8cpp.html">MediaPlayer.cpp</a></code> - manages audio stream processing, buffering, and playback</li>
+<li><code><a class="el" href="wav_8h.html">wav.h</a></code>, <code><a class="el" href="minimp3_8h.html">minimp3.h</a></code> - process audio formats</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md6"></a>
+&lt;tt&gt;core/&lt;/tt&gt;</h2>
+<ul>
+<li>contains files for managing memory adresses and registers</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md7"></a>
+&lt;tt&gt;dac-design/&lt;/tt&gt;</h2>
+<ul>
+<li>contains files for PCB design of DA Converter</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md8"></a>
+&lt;tt&gt;peripherals/&lt;/tt&gt;</h2>
+<ul>
+<li>contains classes for controlling peripheral devices</li>
+<li><code><a class="el" href="LCD_8cpp.html">LCD.cpp</a></code> - controls display and manage views</li>
+<li><code><a class="el" href="DAC_8cpp.html">DAC.cpp</a></code> - provides writing to DA converter</li>
+<li><code><a class="el" href="VUMeter_8cpp.html">VUMeter.cpp</a></code> - controls the 32 LED line visual output</li>
+<li><code><a class="el" href="Encoders_8cpp.html">Encoders.cpp</a></code> - checks states of the encoders and handles their changes</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md9"></a>
+&lt;tt&gt;ui/&lt;/tt&gt;</h2>
+<ul>
+<li>contains classes and files of UI compontents and fonts</li>
+<li><code><a class="el" href="Application_8cpp.html">Application.cpp</a></code> - entry point to UI, contains methods for opeing files and folders</li>
+<li><code><a class="el" href="View_8cpp.html">View.cpp</a></code> - parent of each UI component, contains methods for rendering text and graphics</li>
+<li><code><a class="el" href="ListView_8cpp.html">ListView.cpp</a></code> - UI component for rendering list of items</li>
+<li><code><a class="el" href="PlayingView_8cpp.html">PlayingView.cpp</a></code> - UI component for rendering name, controls and seek bar of currently playing track</li>
+<li><code><a class="el" href="VolumeView_8cpp.html">VolumeView.cpp</a></code> - UI component for rendering volume window on its change</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md10"></a>
+&lt;tt&gt;utils/&lt;/tt&gt;</h2>
+<ul>
+<li>contains util classes for the music player</li>
+<li><code>Executors.cpp</code> - class for scheduling actions and running them on different threads</li>
+<li><code><a class="el" href="FileManager_8cpp.html">FileManager.cpp</a></code> - manages files and folders of the device</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md11"></a>
+PCB fabrication</h1>
+<ul>
+<li>done at home</li>
+<li>only basic components and tools were used</li>
+<li>designed using Autodesk Eagle software</li>
+<li>paths were transfered using laser printer and iron</li>
+<li>etched using FeCl3 (ferric chloride)</li>
+<li>standard procedures were followed (drill holes and soldering components) </li>
+</ul>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->

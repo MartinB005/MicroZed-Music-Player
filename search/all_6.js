@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['fabrication_0',['PCB fabrication',['../md_docs_2tech__docs.html#autotoc_md11',1,'']]],
+  ['fabrication_0',['PCB fabrication',['../index.html#autotoc_md11',1,'']]],
   ['file_1',['file',['../classFile.html',1,'File'],['../structmp3dec__ex__t.html#aa83ce3f305ad2239de2c2167b8a51bc8',1,'mp3dec_ex_t::file'],['../classFile.html#acf7aa7dc2a0932940cc4bab8d2ca0120',1,'File::File()']]],
-  ['file_20format_2',['Audio File Format',['../md_docs_2tech__docs.html#autotoc_md2',1,'']]],
+  ['file_20format_2',['Audio File Format',['../index.html#autotoc_md2',1,'']]],
   ['filemanager_3',['filemanager',['../classFileManager.html',1,'FileManager'],['../classFileManager.html#a8afd512c06be9daf140cc19d71f9b391',1,'FileManager::FileManager()']]],
   ['filemanager_2ecpp_4',['FileManager.cpp',['../FileManager_8cpp.html',1,'']]],
   ['filemanager_2eh_5',['FileManager.h',['../FileManager_8h.html',1,'']]],
@@ -17,8 +17,8 @@ var searchData=
   ['font_5from8x16_2ec_14',['font_rom8x16.c',['../font__rom8x16_8c.html',1,'']]],
   ['font_5ftypes_2eh_15',['font_types.h',['../font__types_8h.html',1,'']]],
   ['font_5fwinfreesystem14x16_16',['font_winfreesystem14x16',['../font__types_8h.html#a4b3e2b838f5b62937b97e1562e34793b',1,'font_winFreeSystem14x16:&#160;font_prop14x16.c'],['../font__prop14x16_8c.html#a4b3e2b838f5b62937b97e1562e34793b',1,'font_winFreeSystem14x16:&#160;font_prop14x16.c']]],
-  ['format_17',['format',['../md_docs_2tech__docs.html#autotoc_md2',1,'Audio File Format'],['../structRIFFHeader.html#ac029c1d8d3596c7d15de2a843a30ce08',1,'RIFFHeader::format']]],
-  ['formats_18',['Supported Audio Formats',['../index.html#autotoc_md14',1,'']]],
+  ['format_17',['format',['../index.html#autotoc_md2',1,'Audio File Format'],['../structRIFFHeader.html#ac029c1d8d3596c7d15de2a843a30ce08',1,'RIFFHeader::format']]],
+  ['formats_18',['Supported Audio Formats',['../md_README.html#autotoc_md14',1,'']]],
   ['frame_5fbytes_19',['frame_bytes',['../structmp3dec__frame__info__t.html#a6c95ac545adf8edf5d25fcc6d8e31928',1,'mp3dec_frame_info_t']]],
   ['frame_5foffset_20',['frame_offset',['../structmp3dec__frame__info__t.html#a66f07b372a3a00857836181ee85e3afa',1,'mp3dec_frame_info_t']]],
   ['frames_21',['frames',['../structmp3dec__index__t.html#a40ff06448948d11cec9dba6e892e8baa',1,'mp3dec_index_t']]],
