@@ -73,7 +73,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="md_README"></a> This is low-level music player written in C/C++ with custom DA Converter as an audio output. It includes simple GUI with file browser and playing controls, which is rendering on 320 x 480 <a class="el" href="classLCD.html">LCD</a>. Player can be controlled by rotary encoders. Current audio level is shown by 32-LED line. See full code documentation <a href="https://martinb005.github.io/MicroZed-Music-Player/annotated.html">here</a>.</p>
-<h1><a class="anchor" id="autotoc_md1"></a>
+<h1><a class="anchor" id="autotoc_md11"></a>
 Target Device</h1>
 <ul>
 <li>MICROZED EVALUATION KIT ADSAES-Z7MB-7Z010-G</li>
@@ -81,13 +81,13 @@ Target Device</h1>
 <li>Operating system: GNU/Linux</li>
 <li>Development kit MicroZed APO (<a href="https://gitlab.com/pikron/projects/mz_apo/microzed_apo">https://gitlab.com/pikron/projects/mz_apo/microzed_apo</a>)</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md2"></a>
+<h1><a class="anchor" id="autotoc_md12"></a>
 Supported Audio Formats</h1>
 <ul>
 <li>16-bit PCM WAV, stereo (2-channel), uncompressed</li>
 <li>MPEG-1 Layer III (MP3), stereo, lossy compression</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md3"></a>
+<h1><a class="anchor" id="autotoc_md13"></a>
 DA Converter</h1>
 <ul>
 <li>10-bit R2R digital to analog converter with LM386 amplifier</li>
@@ -96,7 +96,7 @@ DA Converter</h1>
 <li>See <a href="dac-design/dac.sch">dac.sch</a> and <a href="dac-design/dac.brd">dac.brd</a></li>
 </ul>
 <p>Current implementation uses 3 GPIO pins and 2 shift registers (see <a href="peripherals/DAC.cpp">DAC.cpp</a> and <a href="core/mzapo_regs.h">mzapo_regs.h</a> where is adresses of mapped pins). It is possible to do it without shift registers, if you have 10 free GPIO-s.</p>
-<h1><a class="anchor" id="autotoc_md4"></a>
+<h1><a class="anchor" id="autotoc_md14"></a>
 Instalation</h1>
 <div class="fragment"><div class="line"># clone the repo</div>
 <div class="line">git clone https://github.com/MartinB005/MicroZed-Music-Player.git</div>
@@ -109,10 +109,10 @@ Instalation</h1>
 <div class="line"> </div>
 <div class="line"># compile and run the program</div>
 <div class="line">make run</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md5"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md15"></a>
 Used Libraries</h1>
 <p>MP3 decoding: <a href="https://github.com/lieff/minimp3">https://github.com/lieff/minimp3</a></p>
-<h1><a class="anchor" id="autotoc_md6"></a>
+<h1><a class="anchor" id="autotoc_md16"></a>
 Demonstration Videos</h1>
 <p><a href="https://github.com/user-attachments/assets/9bd06672-fdcf-4da8-a37d-1d057ed24d74">https://github.com/user-attachments/assets/9bd06672-fdcf-4da8-a37d-1d057ed24d74</a></p>
 <p><a href="https://github.com/user-attachments/assets/56f21344-d6c7-4b53-9a67-5a15862af7fc">https://github.com/user-attachments/assets/56f21344-d6c7-4b53-9a67-5a15862af7fc</a> </p>

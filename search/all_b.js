@@ -62,9 +62,10 @@ var searchData=
   ['mp3dec_5ft_59',['mp3dec_t',['../structmp3dec__t.html',1,'']]],
   ['msb_60',['MSB',['../DAC_8cpp.html#a11f27b3b63dfc15c4b4fbb665a3ce3fe',1,'DAC.cpp']]],
   ['music_20player_61',['The MicroZed Music Player',['../index.html',1,'']]],
-  ['mzapo_5fparlcd_2ec_62',['mzapo_parlcd.c',['../mzapo__parlcd_8c.html',1,'']]],
-  ['mzapo_5fparlcd_2eh_63',['mzapo_parlcd.h',['../mzapo__parlcd_8h.html',1,'']]],
-  ['mzapo_5fphys_2ec_64',['mzapo_phys.c',['../mzapo__phys_8c.html',1,'']]],
-  ['mzapo_5fphys_2eh_65',['mzapo_phys.h',['../mzapo__phys_8h.html',1,'']]],
-  ['mzapo_5fregs_2eh_66',['mzapo_regs.h',['../mzapo__regs_8h.html',1,'']]]
+  ['music_20player_20specifications_62',['Music Player Specifications',['../md_docs_2tech__docs.html#autotoc_md1',1,'']]],
+  ['mzapo_5fparlcd_2ec_63',['mzapo_parlcd.c',['../mzapo__parlcd_8c.html',1,'']]],
+  ['mzapo_5fparlcd_2eh_64',['mzapo_parlcd.h',['../mzapo__parlcd_8h.html',1,'']]],
+  ['mzapo_5fphys_2ec_65',['mzapo_phys.c',['../mzapo__phys_8c.html',1,'']]],
+  ['mzapo_5fphys_2eh_66',['mzapo_phys.h',['../mzapo__phys_8h.html',1,'']]],
+  ['mzapo_5fregs_2eh_67',['mzapo_regs.h',['../mzapo__regs_8h.html',1,'']]]
 ];

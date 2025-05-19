@@ -16,7 +16,7 @@ var searchData=
   ['font_5ftypes_2eh_13',['font_types.h',['../font__types_8h.html',1,'']]],
   ['font_5fwinfreesystem14x16_14',['font_winfreesystem14x16',['../font__types_8h.html#a4b3e2b838f5b62937b97e1562e34793b',1,'font_winFreeSystem14x16:&#160;font_prop14x16.c'],['../font__prop14x16_8c.html#a4b3e2b838f5b62937b97e1562e34793b',1,'font_winFreeSystem14x16:&#160;font_prop14x16.c']]],
   ['format_15',['format',['../structRIFFHeader.html#ac029c1d8d3596c7d15de2a843a30ce08',1,'RIFFHeader']]],
-  ['formats_16',['Supported Audio Formats',['../index.html#autotoc_md2',1,'']]],
+  ['formats_16',['Supported Audio Formats',['../index.html#autotoc_md12',1,'']]],
   ['frame_5fbytes_17',['frame_bytes',['../structmp3dec__frame__info__t.html#a6c95ac545adf8edf5d25fcc6d8e31928',1,'mp3dec_frame_info_t']]],
   ['frame_5foffset_18',['frame_offset',['../structmp3dec__frame__info__t.html#a66f07b372a3a00857836181ee85e3afa',1,'mp3dec_frame_info_t']]],
   ['frames_19',['frames',['../structmp3dec__index__t.html#a40ff06448948d11cec9dba6e892e8baa',1,'mp3dec_index_t']]],

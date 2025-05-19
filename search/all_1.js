@@ -8,12 +8,14 @@ var searchData=
   ['application_2ecpp_5',['Application.cpp',['../Application_8cpp.html',1,'']]],
   ['application_2eh_6',['Application.h',['../Application_8h.html',1,'']]],
   ['ascent_7',['ascent',['../structfont__descriptor__t.html#af23bcc2d3e1633f8153cb92df31de704',1,'font_descriptor_t']]],
-  ['audio_20formats_8',['Supported Audio Formats',['../index.html#autotoc_md2',1,'']]],
-  ['audioformat_9',['audioformat',['../MediaPlayer_8h.html#a98d5d077cca088ddf77314871474fe59',1,'AudioFormat:&#160;MediaPlayer.h'],['../structFmtChunk.html#a59a8ca70c0edc6b8a12d3e6c2e2d1e5e',1,'FmtChunk::audioFormat']]],
-  ['audiopwm_5freg_5fbase_5fphys_10',['AUDIOPWM_REG_BASE_PHYS',['../mzapo__regs_8h.html#a462edfe9365bcbd8b6f710c97fdd0c7d',1,'mzapo_regs.h']]],
-  ['audiopwm_5freg_5fcr_5fo_11',['AUDIOPWM_REG_CR_o',['../mzapo__regs_8h.html#a357ae4e6cec3b00dfa3a22b6ccce2193',1,'mzapo_regs.h']]],
-  ['audiopwm_5freg_5fpwm_5fo_12',['AUDIOPWM_REG_PWM_o',['../mzapo__regs_8h.html#a55aaf317fda71b895301468cc3fdcabc',1,'mzapo_regs.h']]],
-  ['audiopwm_5freg_5fpwmper_5fo_13',['AUDIOPWM_REG_PWMPER_o',['../mzapo__regs_8h.html#a3288e58da4ac16e1a0190ec4c58ec603',1,'mzapo_regs.h']]],
-  ['audiopwm_5freg_5fsize_14',['AUDIOPWM_REG_SIZE',['../mzapo__regs_8h.html#a67d99aee0dc41d9958883536a1e66616',1,'mzapo_regs.h']]],
-  ['avg_5fbitrate_5fkbps_15',['avg_bitrate_kbps',['../structmp3dec__file__info__t.html#a09e43c74f163e3f690216f47841ccee7',1,'mp3dec_file_info_t']]]
+  ['audio_20formats_8',['Supported Audio Formats',['../index.html#autotoc_md12',1,'']]],
+  ['audio_20output_9',['Audio Output',['../md_docs_2tech__docs.html#autotoc_md2',1,'']]],
+  ['audio_20tt_10',['&lt;tt&gt;audio/&lt;/tt&gt;',['../md_docs_2tech__docs.html#autotoc_md4',1,'']]],
+  ['audioformat_11',['audioformat',['../structFmtChunk.html#a59a8ca70c0edc6b8a12d3e6c2e2d1e5e',1,'FmtChunk::audioFormat'],['../MediaPlayer_8h.html#a98d5d077cca088ddf77314871474fe59',1,'AudioFormat:&#160;MediaPlayer.h']]],
+  ['audiopwm_5freg_5fbase_5fphys_12',['AUDIOPWM_REG_BASE_PHYS',['../mzapo__regs_8h.html#a462edfe9365bcbd8b6f710c97fdd0c7d',1,'mzapo_regs.h']]],
+  ['audiopwm_5freg_5fcr_5fo_13',['AUDIOPWM_REG_CR_o',['../mzapo__regs_8h.html#a357ae4e6cec3b00dfa3a22b6ccce2193',1,'mzapo_regs.h']]],
+  ['audiopwm_5freg_5fpwm_5fo_14',['AUDIOPWM_REG_PWM_o',['../mzapo__regs_8h.html#a55aaf317fda71b895301468cc3fdcabc',1,'mzapo_regs.h']]],
+  ['audiopwm_5freg_5fpwmper_5fo_15',['AUDIOPWM_REG_PWMPER_o',['../mzapo__regs_8h.html#a3288e58da4ac16e1a0190ec4c58ec603',1,'mzapo_regs.h']]],
+  ['audiopwm_5freg_5fsize_16',['AUDIOPWM_REG_SIZE',['../mzapo__regs_8h.html#a67d99aee0dc41d9958883536a1e66616',1,'mzapo_regs.h']]],
+  ['avg_5fbitrate_5fkbps_17',['avg_bitrate_kbps',['../structmp3dec__file__info__t.html#a09e43c74f163e3f690216f47841ccee7',1,'mp3dec_file_info_t']]]
 ];
