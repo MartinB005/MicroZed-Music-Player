@@ -1,0 +1,98 @@
+\doxysection{Media\+Player.\+h}
+\hypertarget{MediaPlayer_8h_source}{}\label{MediaPlayer_8h_source}\index{audio/MediaPlayer.h@{audio/MediaPlayer.h}}
+\mbox{\hyperlink{MediaPlayer_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <atomic>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{VUMeter_8h}{peripherals/VUMeter.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{DAC_8h}{peripherals/DAC.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Executor_8h}{utils/Executor.h}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{wav_8h}{wav.h}}"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{minimp3__ex_8h}{minimp3\_ex.h}}"{}}}
+\DoxyCodeLine{00016\ \}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ BUFF\_SIZE\ 65536}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{MediaPlayer_8h_a98d5d077cca088ddf77314871474fe59}{AudioFormat}}\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{MediaPlayer_8h_a98d5d077cca088ddf77314871474fe59ab22456aa73d7862a07ffbc9117324f3e}{WAV}},\ \mbox{\hyperlink{MediaPlayer_8h_a98d5d077cca088ddf77314871474fe59a4449f604829c7a948e359aeb0b9b6508}{MP3}}}
+\DoxyCodeLine{00023\ \};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMediaPlayer}{MediaPlayer}}\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMediaPlayer}{MediaPlayer}}(std::string\ filename);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMediaPlayer}{MediaPlayer}}(std::vector<std::string>\ playlist);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMediaPlayer_a8572c371301584e98f6a2cbea6f62b3c}{setOutput}}(\mbox{\hyperlink{classDAC}{DAC}}*\ dac);}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMediaPlayer_a829aec030bf44603047bb544f3cfa373}{showAudioLevel}}(\mbox{\hyperlink{classVUMeter}{VUMeter}}*\ vuMeter);}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMediaPlayer_a5eaf62ecbb3bbee18239bd007f38b584}{setVolume}}(\textcolor{keywordtype}{double}\ volume);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMediaPlayer_afd8a5aab3d63cbd5e23990d4207da472}{setOnPositionUpdate}}(std::function<\textcolor{keywordtype}{void}(\textcolor{keywordtype}{int})>\ func);}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classMediaPlayer_add9b762ab29bf81f374f0ab85145ff86}{getVolume}}();}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classMediaPlayer_a1a0c1276e6c3d5954dc80a00787e8568}{isPlaying}}();}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classMediaPlayer_a76a3ed2c2021ec65079cc7a23aa1d6fc}{getTrackName}}();}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMediaPlayer_a64c608f3b47cafae19ec60c9435df099}{play}}();}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMediaPlayer_a64c608f3b47cafae19ec60c9435df099}{play}}(\textcolor{keywordtype}{int}\ trackNumber);}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMediaPlayer_a601ab3d93244e06da5fff56f4373d039}{nextTrack}}();}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMediaPlayer_a24af9993f26c362fe12e2be55679275d}{previousTrack}}();}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMediaPlayer_a790f3b46f3961771fe67ce57591eb9d1}{pause}}();}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMediaPlayer_a34a38724c55c67644c9a4ee6844d71a2}{stop}}();}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ int16\_t\ bufferA[\mbox{\hyperlink{MediaPlayer_8h_a6c7cd32e1bac137f05e4a752b4ad10af}{BUFF\_SIZE}}];}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ int16\_t\ bufferB[\mbox{\hyperlink{MediaPlayer_8h_a6c7cd32e1bac137f05e4a752b4ad10af}{BUFF\_SIZE}}];}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ int16\_t*\ playerBuff\ =\ bufferA;}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ int16\_t*\ fileBuff\ =\ bufferB;}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ uint32\_t\ sampleRate;}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{MediaPlayer_8h_a98d5d077cca088ddf77314871474fe59}{AudioFormat}}\ audioFormat;}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classExecutor}{Executor}}\ executor;}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classVUMeter}{VUMeter}}*\ vuMeter;}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ FILE*\ file;}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structmp3dec__ex__t}{mp3dec\_ex\_t}}\ dec;}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classDAC}{DAC}}*\ dac;}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ std::function<void(\textcolor{keywordtype}{int})>\ onPosUpdate\ =\ NULL;}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ std::string\ trackName;}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ std::atomic<bool>\ readStorage\{\textcolor{keyword}{false}\};}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ std::vector<std::string>\ playlist;}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ numSamples;}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ position\ =\ 0;}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ volume\ =\ 0.5;}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ playing\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ prepared\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ trackNumber\ =\ 0;}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ buffPos;}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ readWavHeader(FILE*\ file);}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ prepareBuffers();}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ swapAndFeed();}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ prepareTrack(std::string\ filename);}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00172\ \};}
+
+\end{DoxyCode}

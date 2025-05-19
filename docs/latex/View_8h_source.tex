@@ -1,0 +1,53 @@
+\doxysection{View.\+h}
+\hypertarget{View_8h_source}{}\label{View_8h_source}\index{ui/View.h@{ui/View.h}}
+\mbox{\hyperlink{View_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{icons_8h}{icons.h}}"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{colors_8h}{colors.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ WIDTH\_RATIO(val,\ scale)\ WIDTH\ *\ val\ /\ 100\ -\/\ ICON\_SIZE\ *\ scale\ /\ 2}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ CENTER\ -\/1}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classView}{View}}\ \{}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classView}{View}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classView_ae039aa744b085db819ae149705b2c32b}{width}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classView_a6e3e5c18893617490f02166641356746}{height}});}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classView_a109130223eb08586d7871586b5493179}{setWriteDest}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}*\ addr,\ std::function<\textcolor{keywordtype}{void}()>\ func);\ \ \ \ }
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classView_a5eef577fe576d8a9aafa324f7cec2ddd}{updateScreen}}();}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classView_a92f302a31d4b4359a2ec0323b79e2531}{blackScreen}}();}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}*\ \mbox{\hyperlink{classView_a37de1b19bb9d05dbb359c9cb369b6dac}{getPixels}}();}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classView_a542c85fdbe5974f4ccb80a3fc662ac6e}{getWidth}}();}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classView_adddf60bbe68432cf11dddf9d3eb9c1d8}{getHeight}}();}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classView_a8caf26d67197c101c37da5c9cddfb534}{update}}()\ =\ 0;}
+\DoxyCodeLine{00051\ \ \ \ \ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}*\ pixels\ =\ NULL;}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ std::function<void()>\ onUpdate;}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ frozen\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classView_ae039aa744b085db819ae149705b2c32b}{width}},\ \mbox{\hyperlink{classView_a6e3e5c18893617490f02166641356746}{height}};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classView_abdb53d87a0348ac5536257c962647b12}{renderText}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ text,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{int}\ color,\ \textcolor{keywordtype}{int}\ background);}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classView_abdb53d87a0348ac5536257c962647b12}{renderText}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ text,\ \textcolor{keywordtype}{int}\ pos\_x,\ \textcolor{keywordtype}{int}\ pos\_y,\ \textcolor{keywordtype}{int}\ color,\ \textcolor{keywordtype}{int}\ background,\ \textcolor{keywordtype}{int}\ scale);}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classView_a68cea4a3af161364cc40fab71f01e9de}{renderRect}}(\textcolor{keywordtype}{int}\ pos\_x,\ \textcolor{keywordtype}{int}\ pos\_y,\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classView_ae039aa744b085db819ae149705b2c32b}{width}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classView_a6e3e5c18893617490f02166641356746}{height}},\ \textcolor{keywordtype}{int}\ color);}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classView_a2dc303af269e53d0f07c855ee09486c5}{renderIcon}}(\mbox{\hyperlink{icons_8h_a2e0a7df2c213e15b6235d43a157f38bf}{icon}}\ icn,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{float}\ scale,\ \textcolor{keywordtype}{int}\ color,\ \textcolor{keywordtype}{int}\ background\ =\ \mbox{\hyperlink{colors_8h_a7b3b25cba33b07c303f3060fe41887f6}{BLACK}});}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classView_a943fbdf0eff3ee24f758fc7099f334dc}{getCharPixel}}(\textcolor{keywordtype}{char}\ c,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{int}\ color,\ \textcolor{keywordtype}{int}\ background);}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classView_aa2c990d7ff1f68c912bca5f7e03124c8}{getWordPixel}}(\textcolor{keywordtype}{char}*\ str,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{int}\ color,\ \textcolor{keywordtype}{int}\ background);\ }
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classView_a86162e9f21a53ef042530a984d8c9e10}{getLineHeight}}();}
+\DoxyCodeLine{00130\ \};}
+
+\end{DoxyCode}

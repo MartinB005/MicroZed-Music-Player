@@ -6,12 +6,27 @@
 
 class LCD {
     public:
+    
+        /**
+         * @brief map the base memory to control the display and prepare it for write
+         */
         void init();
+
+        /**
+         * @brief Set the View which should be displayed
+         * 
+         * @param view the View object pointer
+         */
         void setView(View* view);
+
+        /**
+         * @brief show white screen on the display
+         */
         void whiteScreen();
-        void renderText(char* text, int x, int y, int color, int background);
-        void renderRect(int pos_x, int pos_y, int width, int height, int color);
-        void setView(View view, int x, int y);
+
+        /**
+         * @brief apply written data to the display output        * 
+         */
         void update();
 
         View* getCurrentView();
@@ -19,8 +34,5 @@ class LCD {
 
     private:
         View* currentView = NULL;
-
-        int getCharPixel(char c, int x, int y, int color, int background);
-        int getWordPixel(char* str, int x, int y, int color, int background);
 };
 

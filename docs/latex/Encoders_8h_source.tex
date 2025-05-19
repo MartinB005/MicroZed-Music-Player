@@ -1,0 +1,35 @@
+\doxysection{Encoders.\+h}
+\hypertarget{Encoders_8h_source}{}\label{Encoders_8h_source}\index{peripherals/Encoders.h@{peripherals/Encoders.h}}
+\mbox{\hyperlink{Encoders_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{Encoders_8h_af5c9880f430836f93380cd59525fe25c}{Encoder}}\ \{}
+\DoxyCodeLine{00006\ \ \ \ \ \mbox{\hyperlink{Encoders_8h_af5c9880f430836f93380cd59525fe25caca9c828cd7179ae9dd6fa215b4bc7ae8}{RED\_KNOB}},}
+\DoxyCodeLine{00007\ \ \ \ \ \mbox{\hyperlink{Encoders_8h_af5c9880f430836f93380cd59525fe25caba1f4b6eabde77ac01fa03628e876d0a}{GREEN\_KNOB}},}
+\DoxyCodeLine{00008\ \ \ \ \ \mbox{\hyperlink{Encoders_8h_af5c9880f430836f93380cd59525fe25ca860f8c2c3da5bd9693c99a16f85c27a2}{BLUE\_KNOB}}}
+\DoxyCodeLine{00009\ \};}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classEncoders}{Encoders}}\ \{}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEncoders_a8e17f23ab455491e48803c369e6b2130}{init}}();}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEncoders_afa6d279260569c25b1e493895447e1dd}{setOnValueChange}}(\mbox{\hyperlink{Encoders_8h_af5c9880f430836f93380cd59525fe25c}{Encoder}}\ encoder,\ std::function<\textcolor{keywordtype}{void}(\textcolor{keywordtype}{bool})>);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEncoders_a5f73ad3f8eaf18db0f79932f660b990e}{setOnPress}}(\mbox{\hyperlink{Encoders_8h_af5c9880f430836f93380cd59525fe25c}{Encoder}}\ encoder,\ \ std::function<\textcolor{keywordtype}{void}()>);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEncoders_a22fac54c9f680aaad6a23075dd9d3840}{check}}();}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ *mem\_base;}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ uint8\_t\ lastVals[3];}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ pressed[3]\ =\ \{\textcolor{keyword}{false}\};}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ std::function<void(\textcolor{keywordtype}{bool})>\ onValChange[3];}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ std::function<void()>\ onPress[3];}
+\DoxyCodeLine{00047\ \};}
+
+\end{DoxyCode}

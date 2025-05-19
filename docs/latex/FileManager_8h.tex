@@ -1,0 +1,53 @@
+\doxysection{utils/\+File\+Manager.h File Reference}
+\hypertarget{FileManager_8h}{}\label{FileManager_8h}\index{utils/FileManager.h@{utils/FileManager.h}}
+{\ttfamily \#include $<$dirent.\+h$>$}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+Include dependency graph for File\+Manager.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classFile}{File}}
+\item 
+class \mbox{\hyperlink{classFileManager}{File\+Manager}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{FileManager_8h_a2c794c5c13ab4dd7e65bad031dbe41c3}{File\+Type}} \{ \mbox{\hyperlink{FileManager_8h_a2c794c5c13ab4dd7e65bad031dbe41c3ae0a76699419eeff377e7d00ea0603625}{CHILD\+\_\+\+DIR}}
+, \mbox{\hyperlink{FileManager_8h_a2c794c5c13ab4dd7e65bad031dbe41c3aff125052574a6a0882610e23eb5ac0fc}{PARENT\+\_\+\+DIR}}
+, \mbox{\hyperlink{FileManager_8h_a2c794c5c13ab4dd7e65bad031dbe41c3a4c63500d8ca5573aa023c92de5213062}{SOUND\+\_\+\+FILE}}
+, \mbox{\hyperlink{FileManager_8h_a2c794c5c13ab4dd7e65bad031dbe41c3a80239aa32ad02d66c1d30074f44c8c85}{UNKNOWN\+\_\+\+FILE}}
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{FileManager_8h_a2c794c5c13ab4dd7e65bad031dbe41c3}\label{FileManager_8h_a2c794c5c13ab4dd7e65bad031dbe41c3} 
+\index{FileManager.h@{FileManager.h}!FileType@{FileType}}
+\index{FileType@{FileType}!FileManager.h@{FileManager.h}}
+\doxysubsubsection{\texorpdfstring{FileType}{FileType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{FileManager_8h_a2c794c5c13ab4dd7e65bad031dbe41c3}{File\+Type}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CHILD\_DIR@{CHILD\_DIR}!FileManager.h@{FileManager.h}}\index{FileManager.h@{FileManager.h}!CHILD\_DIR@{CHILD\_DIR}}}\Hypertarget{FileManager_8h_a2c794c5c13ab4dd7e65bad031dbe41c3ae0a76699419eeff377e7d00ea0603625}\label{FileManager_8h_a2c794c5c13ab4dd7e65bad031dbe41c3ae0a76699419eeff377e7d00ea0603625} 
+CHILD\+\_\+\+DIR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PARENT\_DIR@{PARENT\_DIR}!FileManager.h@{FileManager.h}}\index{FileManager.h@{FileManager.h}!PARENT\_DIR@{PARENT\_DIR}}}\Hypertarget{FileManager_8h_a2c794c5c13ab4dd7e65bad031dbe41c3aff125052574a6a0882610e23eb5ac0fc}\label{FileManager_8h_a2c794c5c13ab4dd7e65bad031dbe41c3aff125052574a6a0882610e23eb5ac0fc} 
+PARENT\+\_\+\+DIR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SOUND\_FILE@{SOUND\_FILE}!FileManager.h@{FileManager.h}}\index{FileManager.h@{FileManager.h}!SOUND\_FILE@{SOUND\_FILE}}}\Hypertarget{FileManager_8h_a2c794c5c13ab4dd7e65bad031dbe41c3a4c63500d8ca5573aa023c92de5213062}\label{FileManager_8h_a2c794c5c13ab4dd7e65bad031dbe41c3a4c63500d8ca5573aa023c92de5213062} 
+SOUND\+\_\+\+FILE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UNKNOWN\_FILE@{UNKNOWN\_FILE}!FileManager.h@{FileManager.h}}\index{FileManager.h@{FileManager.h}!UNKNOWN\_FILE@{UNKNOWN\_FILE}}}\Hypertarget{FileManager_8h_a2c794c5c13ab4dd7e65bad031dbe41c3a80239aa32ad02d66c1d30074f44c8c85}\label{FileManager_8h_a2c794c5c13ab4dd7e65bad031dbe41c3a80239aa32ad02d66c1d30074f44c8c85} 
+UNKNOWN\+\_\+\+FILE&\\
+\hline
+
+\end{DoxyEnumFields}

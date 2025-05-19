@@ -1,0 +1,57 @@
+\doxysection{Application.\+h}
+\hypertarget{Application_8h_source}{}\label{Application_8h_source}\index{ui/Application.h@{ui/Application.h}}
+\mbox{\hyperlink{Application_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{LCD_8h}{peripherals/LCD.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{DAC_8h}{peripherals/DAC.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{VUMeter_8h}{peripherals/VUMeter.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{FileManager_8h}{utils/FileManager.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{VolumeView_8h}{VolumeView.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{PlayingView_8h}{PlayingView.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ListView_8h}{ListView.h}}"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classApplication}{Application}}\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ }
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classApplication_afa8cc05ce6b6092be5ecdfdae44e05f8}{Application}}();}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classApplication_aa38ca47b50935092078cef4281ab66bc}{start}}();}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classApplication_a9908f665ab8959b5b43f6d24e08f83aa}{isPlayingTrack}}();}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classApplication_a550b30522bfac2f8612ed53c4fc99f0b}{hasPausedTrack}}();}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classApplication_a1a864191818436f046ac14a5dd4305af}{setVolume}}(\textcolor{keywordtype}{double}\ volume);}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classApplication_acffbef083fb19ef24243b39ef179a7fb}{getVolume}}();}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classApplication_ab8004035eaebcfb9fb0fc766ce2c209c}{showingPlayingView}}();}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classListView}{ListView}}*\ \mbox{\hyperlink{classApplication_accb2449aca423006f7e5a8704e2b8670}{getMainListView}}();}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMediaPlayer}{MediaPlayer}}*\ \mbox{\hyperlink{classApplication_ac5a49dc0e32808a5ad36fb109d0ca84c}{getMediaPlayer}}();}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classLCD}{LCD}}*\ \mbox{\hyperlink{classApplication_ac95c9a51350ba40939ddaffc66d79ddd}{getLCD}}();}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classApplication_aff0277a1549b8c72bfa2cb9c3a590734}{openSelectedFile}}();}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classApplication_a073bb9e4802de0d347058dd6745f1141}{showPlayingView}}();}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classMediaPlayer}{MediaPlayer}}*\ mediaPlayer;}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classFileManager}{FileManager}}\ fileManager;}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classListView}{ListView}}\ list;}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classVUMeter}{VUMeter}}\ vuMeter;}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPlayingView}{PlayingView}}\ playingView;}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classVolumeView}{VolumeView}}\ volumeView;}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classDAC}{DAC}}\ dac;}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classLCD}{LCD}}\ lcd;}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ volume\ =\ 0.5;}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ openDir(std::string\ name);}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ openFile(std::vector<File>\&\ files,\ \textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00094\ \};}
+
+\end{DoxyCode}

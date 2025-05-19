@@ -1,0 +1,52 @@
+\doxysection{core/serialize\+\_\+lock.c File Reference}
+\hypertarget{serialize__lock_8c}{}\label{serialize__lock_8c}\index{core/serialize\_lock.c@{core/serialize\_lock.c}}
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include "{}serialize\+\_\+lock.\+h"{}}\newline
+Include dependency graph for serialize\+\_\+lock.\+c\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{serialize__lock_8c_ae6ea03b9798717001e8a15fc3735eb84}{serialize\+\_\+lock}} (int no\+\_\+wait)
+\item 
+void \mbox{\hyperlink{serialize__lock_8c_a916ef18f4a12bc1b318105ec3020f3b4}{serialize\+\_\+unlock}} (void)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{serialize__lock_8c_a44127f57fe7fb65ea6672b3ea424528d}{serialize\+\_\+lock\+\_\+fname}} = "{}/run/lock/serialize\+\_\+lock"{}
+\item 
+int \mbox{\hyperlink{serialize__lock_8c_a4f816309482ae31dfe2a4602c9f4efa1}{serialize\+\_\+lock\+\_\+fd}} = -\/1
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{serialize__lock_8c_ae6ea03b9798717001e8a15fc3735eb84}\label{serialize__lock_8c_ae6ea03b9798717001e8a15fc3735eb84} 
+\index{serialize\_lock.c@{serialize\_lock.c}!serialize\_lock@{serialize\_lock}}
+\index{serialize\_lock@{serialize\_lock}!serialize\_lock.c@{serialize\_lock.c}}
+\doxysubsubsection{\texorpdfstring{serialize\_lock()}{serialize\_lock()}}
+{\footnotesize\ttfamily int serialize\+\_\+lock (\begin{DoxyParamCaption}\item[{int}]{no\+\_\+wait }\end{DoxyParamCaption})}
+
+\Hypertarget{serialize__lock_8c_a916ef18f4a12bc1b318105ec3020f3b4}\label{serialize__lock_8c_a916ef18f4a12bc1b318105ec3020f3b4} 
+\index{serialize\_lock.c@{serialize\_lock.c}!serialize\_unlock@{serialize\_unlock}}
+\index{serialize\_unlock@{serialize\_unlock}!serialize\_lock.c@{serialize\_lock.c}}
+\doxysubsubsection{\texorpdfstring{serialize\_unlock()}{serialize\_unlock()}}
+{\footnotesize\ttfamily void serialize\+\_\+unlock (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{serialize__lock_8c_a4f816309482ae31dfe2a4602c9f4efa1}\label{serialize__lock_8c_a4f816309482ae31dfe2a4602c9f4efa1} 
+\index{serialize\_lock.c@{serialize\_lock.c}!serialize\_lock\_fd@{serialize\_lock\_fd}}
+\index{serialize\_lock\_fd@{serialize\_lock\_fd}!serialize\_lock.c@{serialize\_lock.c}}
+\doxysubsubsection{\texorpdfstring{serialize\_lock\_fd}{serialize\_lock\_fd}}
+{\footnotesize\ttfamily int serialize\+\_\+lock\+\_\+fd = -\/1}
+
+\Hypertarget{serialize__lock_8c_a44127f57fe7fb65ea6672b3ea424528d}\label{serialize__lock_8c_a44127f57fe7fb65ea6672b3ea424528d} 
+\index{serialize\_lock.c@{serialize\_lock.c}!serialize\_lock\_fname@{serialize\_lock\_fname}}
+\index{serialize\_lock\_fname@{serialize\_lock\_fname}!serialize\_lock.c@{serialize\_lock.c}}
+\doxysubsubsection{\texorpdfstring{serialize\_lock\_fname}{serialize\_lock\_fname}}
+{\footnotesize\ttfamily const char\texorpdfstring{$\ast$}{*} serialize\+\_\+lock\+\_\+fname = "{}/run/lock/serialize\+\_\+lock"{}}
+

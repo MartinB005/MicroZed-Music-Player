@@ -1,0 +1,324 @@
+\doxysection{View Class Reference}
+\hypertarget{classView}{}\label{classView}\index{View@{View}}
+
+
+{\ttfamily \#include $<$View.\+h$>$}
+
+
+
+Inheritance diagram for View\+:
+% FIG 0
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classView_ae8b891693776332f98a9af7d34bbf94e}{View}} (int \mbox{\hyperlink{classView_ae039aa744b085db819ae149705b2c32b}{width}}, int \mbox{\hyperlink{classView_a6e3e5c18893617490f02166641356746}{height}})
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{classView}{View} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classView_a109130223eb08586d7871586b5493179}{set\+Write\+Dest}} (unsigned int \texorpdfstring{$\ast$}{*}addr, std\+::function$<$ void()$>$ func)
+\begin{DoxyCompactList}\small\item\em Set the destination where should the object write the output. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classView_a5eef577fe576d8a9aafa324f7cec2ddd}{update\+Screen}} ()
+\begin{DoxyCompactList}\small\item\em Update the view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classView_a92f302a31d4b4359a2ec0323b79e2531}{black\+Screen}} ()
+\begin{DoxyCompactList}\small\item\em Show the black screen. \end{DoxyCompactList}\item 
+unsigned int \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classView_a37de1b19bb9d05dbb359c9cb369b6dac}{get\+Pixels}} ()
+\begin{DoxyCompactList}\small\item\em Get the Pixels destination pointer. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classView_a542c85fdbe5974f4ccb80a3fc662ac6e}{get\+Width}} ()
+\item 
+int \mbox{\hyperlink{classView_adddf60bbe68432cf11dddf9d3eb9c1d8}{get\+Height}} ()
+\item 
+virtual void \mbox{\hyperlink{classView_a8caf26d67197c101c37da5c9cddfb534}{update}} ()=0
+\begin{DoxyCompactList}\small\item\em Update the child object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classView_abdb53d87a0348ac5536257c962647b12}{render\+Text}} (const char \texorpdfstring{$\ast$}{*}text, int x, int y, int color, int background)
+\begin{DoxyCompactList}\small\item\em Render text on the view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classView_a642d2bbe5b64a1c473aea2d45584f5d8}{render\+Text}} (const char \texorpdfstring{$\ast$}{*}text, int pos\+\_\+x, int pos\+\_\+y, int color, int background, int scale)
+\begin{DoxyCompactList}\small\item\em Render text on the view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classView_a68cea4a3af161364cc40fab71f01e9de}{render\+Rect}} (int pos\+\_\+x, int pos\+\_\+y, int \mbox{\hyperlink{classView_ae039aa744b085db819ae149705b2c32b}{width}}, int \mbox{\hyperlink{classView_a6e3e5c18893617490f02166641356746}{height}}, int color)
+\begin{DoxyCompactList}\small\item\em Render rectangle on the view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classView_a2dc303af269e53d0f07c855ee09486c5}{render\+Icon}} (\mbox{\hyperlink{icons_8h_a2e0a7df2c213e15b6235d43a157f38bf}{icon}} icn, int x, int y, float scale, int color, int background=\mbox{\hyperlink{colors_8h_a7b3b25cba33b07c303f3060fe41887f6}{BLACK}})
+\begin{DoxyCompactList}\small\item\em Render icon on the view. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classView_a943fbdf0eff3ee24f758fc7099f334dc}{get\+Char\+Pixel}} (char c, int x, int y, int color, int background)
+\begin{DoxyCompactList}\small\item\em Get the character pixel of the text. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classView_aa2c990d7ff1f68c912bca5f7e03124c8}{get\+Word\+Pixel}} (char \texorpdfstring{$\ast$}{*}str, int x, int y, int color, int background)
+\begin{DoxyCompactList}\small\item\em Get the word pixel. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classView_a86162e9f21a53ef042530a984d8c9e10}{get\+Line\+Height}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classView_ae039aa744b085db819ae149705b2c32b}{width}}
+\item 
+int \mbox{\hyperlink{classView_a6e3e5c18893617490f02166641356746}{height}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classView_ae8b891693776332f98a9af7d34bbf94e}\label{classView_ae8b891693776332f98a9af7d34bbf94e} 
+\index{View@{View}!View@{View}}
+\index{View@{View}!View@{View}}
+\doxysubsubsection{\texorpdfstring{View()}{View()}}
+{\footnotesize\ttfamily View\+::\+View (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+
+
+Construct a new \doxylink{classView}{View} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & of the view \\
+\hline
+{\em height} & of the view \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classView_a92f302a31d4b4359a2ec0323b79e2531}\label{classView_a92f302a31d4b4359a2ec0323b79e2531} 
+\index{View@{View}!blackScreen@{blackScreen}}
+\index{blackScreen@{blackScreen}!View@{View}}
+\doxysubsubsection{\texorpdfstring{blackScreen()}{blackScreen()}}
+{\footnotesize\ttfamily void View\+::black\+Screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Show the black screen. 
+
+\Hypertarget{classView_a943fbdf0eff3ee24f758fc7099f334dc}\label{classView_a943fbdf0eff3ee24f758fc7099f334dc} 
+\index{View@{View}!getCharPixel@{getCharPixel}}
+\index{getCharPixel@{getCharPixel}!View@{View}}
+\doxysubsubsection{\texorpdfstring{getCharPixel()}{getCharPixel()}}
+{\footnotesize\ttfamily int View\+::get\+Char\+Pixel (\begin{DoxyParamCaption}\item[{char}]{c,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{color,  }\item[{int}]{background }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Get the character pixel of the text. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & character \\
+\hline
+{\em x} & position x \\
+\hline
+{\em y} & position y \\
+\hline
+{\em color} & fill color \\
+\hline
+{\em background} & color \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int pixel color 
+\end{DoxyReturn}
+\Hypertarget{classView_adddf60bbe68432cf11dddf9d3eb9c1d8}\label{classView_adddf60bbe68432cf11dddf9d3eb9c1d8} 
+\index{View@{View}!getHeight@{getHeight}}
+\index{getHeight@{getHeight}!View@{View}}
+\doxysubsubsection{\texorpdfstring{getHeight()}{getHeight()}}
+{\footnotesize\ttfamily int View\+::get\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classView_a86162e9f21a53ef042530a984d8c9e10}\label{classView_a86162e9f21a53ef042530a984d8c9e10} 
+\index{View@{View}!getLineHeight@{getLineHeight}}
+\index{getLineHeight@{getLineHeight}!View@{View}}
+\doxysubsubsection{\texorpdfstring{getLineHeight()}{getLineHeight()}}
+{\footnotesize\ttfamily int View\+::get\+Line\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classView_a37de1b19bb9d05dbb359c9cb369b6dac}\label{classView_a37de1b19bb9d05dbb359c9cb369b6dac} 
+\index{View@{View}!getPixels@{getPixels}}
+\index{getPixels@{getPixels}!View@{View}}
+\doxysubsubsection{\texorpdfstring{getPixels()}{getPixels()}}
+{\footnotesize\ttfamily unsigned int \texorpdfstring{$\ast$}{*} View\+::get\+Pixels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Pixels destination pointer. 
+
+\Hypertarget{classView_a542c85fdbe5974f4ccb80a3fc662ac6e}\label{classView_a542c85fdbe5974f4ccb80a3fc662ac6e} 
+\index{View@{View}!getWidth@{getWidth}}
+\index{getWidth@{getWidth}!View@{View}}
+\doxysubsubsection{\texorpdfstring{getWidth()}{getWidth()}}
+{\footnotesize\ttfamily int View\+::get\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classView_aa2c990d7ff1f68c912bca5f7e03124c8}\label{classView_aa2c990d7ff1f68c912bca5f7e03124c8} 
+\index{View@{View}!getWordPixel@{getWordPixel}}
+\index{getWordPixel@{getWordPixel}!View@{View}}
+\doxysubsubsection{\texorpdfstring{getWordPixel()}{getWordPixel()}}
+{\footnotesize\ttfamily int View\+::get\+Word\+Pixel (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{str,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{color,  }\item[{int}]{background }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Get the word pixel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & text \\
+\hline
+{\em x} & position x \\
+\hline
+{\em y} & position y \\
+\hline
+{\em color} & fill color \\
+\hline
+{\em background} & color \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int pixel color 
+\end{DoxyReturn}
+\Hypertarget{classView_a2dc303af269e53d0f07c855ee09486c5}\label{classView_a2dc303af269e53d0f07c855ee09486c5} 
+\index{View@{View}!renderIcon@{renderIcon}}
+\index{renderIcon@{renderIcon}!View@{View}}
+\doxysubsubsection{\texorpdfstring{renderIcon()}{renderIcon()}}
+{\footnotesize\ttfamily void View\+::render\+Icon (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{icons_8h_a2e0a7df2c213e15b6235d43a157f38bf}{icon}}}]{icn,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{float}]{scale,  }\item[{int}]{color,  }\item[{int}]{background = {\ttfamily \mbox{\hyperlink{colors_8h_a7b3b25cba33b07c303f3060fe41887f6}{BLACK}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Render icon on the view. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em icn} & icon \\
+\hline
+{\em x} & position x \\
+\hline
+{\em y} & position y \\
+\hline
+{\em scale} & scaled size of the icon \\
+\hline
+{\em color} & fill color of the icon \\
+\hline
+{\em background} & color \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classView_a68cea4a3af161364cc40fab71f01e9de}\label{classView_a68cea4a3af161364cc40fab71f01e9de} 
+\index{View@{View}!renderRect@{renderRect}}
+\index{renderRect@{renderRect}!View@{View}}
+\doxysubsubsection{\texorpdfstring{renderRect()}{renderRect()}}
+{\footnotesize\ttfamily void View\+::render\+Rect (\begin{DoxyParamCaption}\item[{int}]{pos\+\_\+x,  }\item[{int}]{pos\+\_\+y,  }\item[{int}]{width,  }\item[{int}]{height,  }\item[{int}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Render rectangle on the view. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos\+\_\+x} & position x \\
+\hline
+{\em pos\+\_\+y} & position y \\
+\hline
+{\em width} & of the rectangle \\
+\hline
+{\em height} & of the rectangle \\
+\hline
+{\em color} & fill of the rectangle \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classView_a642d2bbe5b64a1c473aea2d45584f5d8}\label{classView_a642d2bbe5b64a1c473aea2d45584f5d8} 
+\index{View@{View}!renderText@{renderText}}
+\index{renderText@{renderText}!View@{View}}
+\doxysubsubsection{\texorpdfstring{renderText()}{renderText()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void View\+::render\+Text (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{text,  }\item[{int}]{pos\+\_\+x,  }\item[{int}]{pos\+\_\+y,  }\item[{int}]{color,  }\item[{int}]{background,  }\item[{int}]{scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Render text on the view. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & \\
+\hline
+{\em x} & position x \\
+\hline
+{\em y} & position y \\
+\hline
+{\em color} & fill color of the text \\
+\hline
+{\em background} & color \\
+\hline
+{\em scale} & text scaled size \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classView_abdb53d87a0348ac5536257c962647b12}\label{classView_abdb53d87a0348ac5536257c962647b12} 
+\index{View@{View}!renderText@{renderText}}
+\index{renderText@{renderText}!View@{View}}
+\doxysubsubsection{\texorpdfstring{renderText()}{renderText()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void View\+::render\+Text (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{text,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{color,  }\item[{int}]{background }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Render text on the view. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & \\
+\hline
+{\em x} & position x \\
+\hline
+{\em y} & position y \\
+\hline
+{\em color} & fill color of the text \\
+\hline
+{\em background} & color \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classView_a109130223eb08586d7871586b5493179}\label{classView_a109130223eb08586d7871586b5493179} 
+\index{View@{View}!setWriteDest@{setWriteDest}}
+\index{setWriteDest@{setWriteDest}!View@{View}}
+\doxysubsubsection{\texorpdfstring{setWriteDest()}{setWriteDest()}}
+{\footnotesize\ttfamily void View\+::set\+Write\+Dest (\begin{DoxyParamCaption}\item[{unsigned int \texorpdfstring{$\ast$}{*}}]{addr,  }\item[{std\+::function$<$ void()$>$}]{func }\end{DoxyParamCaption})}
+
+
+
+Set the destination where should the object write the output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em addr} & pointer to the pixel buffer \\
+\hline
+{\em func} & callback after view is updated \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classView_a8caf26d67197c101c37da5c9cddfb534}\label{classView_a8caf26d67197c101c37da5c9cddfb534} 
+\index{View@{View}!update@{update}}
+\index{update@{update}!View@{View}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily virtual void View\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Update the child object. 
+
+
+
+Implemented in \mbox{\hyperlink{classListView_a75223249201069eaf9d24802a5193afe}{List\+View}}, \mbox{\hyperlink{classPlayingView_acc4d8cba6da94cbd0ca5b3bfdbf997fe}{Playing\+View}}, and \mbox{\hyperlink{classVolumeView_a27ea63d02bdd229e6bbd788ec412d0fb}{Volume\+View}}.
+
+\Hypertarget{classView_a5eef577fe576d8a9aafa324f7cec2ddd}\label{classView_a5eef577fe576d8a9aafa324f7cec2ddd} 
+\index{View@{View}!updateScreen@{updateScreen}}
+\index{updateScreen@{updateScreen}!View@{View}}
+\doxysubsubsection{\texorpdfstring{updateScreen()}{updateScreen()}}
+{\footnotesize\ttfamily void View\+::update\+Screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Update the view. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classView_a6e3e5c18893617490f02166641356746}\label{classView_a6e3e5c18893617490f02166641356746} 
+\index{View@{View}!height@{height}}
+\index{height@{height}!View@{View}}
+\doxysubsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily int View\+::height\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classView_ae039aa744b085db819ae149705b2c32b}\label{classView_ae039aa744b085db819ae149705b2c32b} 
+\index{View@{View}!width@{width}}
+\index{width@{width}!View@{View}}
+\doxysubsubsection{\texorpdfstring{width}{width}}
+{\footnotesize\ttfamily int View\+::width\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+ui/\mbox{\hyperlink{View_8h}{View.\+h}}\item 
+ui/\mbox{\hyperlink{View_8cpp}{View.\+cpp}}\end{DoxyCompactItemize}

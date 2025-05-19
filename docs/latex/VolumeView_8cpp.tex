@@ -1,0 +1,63 @@
+\doxysection{ui/\+Volume\+View.cpp File Reference}
+\hypertarget{VolumeView_8cpp}{}\label{VolumeView_8cpp}\index{ui/VolumeView.cpp@{ui/VolumeView.cpp}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include "{}Volume\+View.\+h"{}}\newline
+{\ttfamily \#include "{}peripherals/\+LCD.\+h"{}}\newline
+{\ttfamily \#include "{}colors.\+h"{}}\newline
+Include dependency graph for Volume\+View.\+cpp\+:
+% FIG 0
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{VolumeView_8cpp_a8a01cbb9f585617110976d14d25f1c66}{TEXT\+\_\+Y}}~100
+\item 
+\#define \mbox{\hyperlink{VolumeView_8cpp_a04e9a412f96468cbddc827bd544f6e10}{SPEAKER\+\_\+Y}}~130
+\item 
+\#define \mbox{\hyperlink{VolumeView_8cpp_a2258c0c95f20b9d7b0e013c3efbda536}{VOLBAR\+\_\+Y}}~220
+\item 
+\#define \mbox{\hyperlink{VolumeView_8cpp_a03e28977803b4fc622befda0bab7f5fb}{VOLBAR\+\_\+\+WEIGHT}}~6
+\item 
+\#define \mbox{\hyperlink{VolumeView_8cpp_a8d9afb11f00089d9a34fbb5d9c3835af}{PADDING\+\_\+X}}~100
+\item 
+\#define \mbox{\hyperlink{VolumeView_8cpp_a99ce9ae96e15e1b5d046ff2837d6b46e}{PADDING\+\_\+Y}}~70
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{VolumeView_8cpp_a8d9afb11f00089d9a34fbb5d9c3835af}\label{VolumeView_8cpp_a8d9afb11f00089d9a34fbb5d9c3835af} 
+\index{VolumeView.cpp@{VolumeView.cpp}!PADDING\_X@{PADDING\_X}}
+\index{PADDING\_X@{PADDING\_X}!VolumeView.cpp@{VolumeView.cpp}}
+\doxysubsubsection{\texorpdfstring{PADDING\_X}{PADDING\_X}}
+{\footnotesize\ttfamily \#define PADDING\+\_\+X~100}
+
+\Hypertarget{VolumeView_8cpp_a99ce9ae96e15e1b5d046ff2837d6b46e}\label{VolumeView_8cpp_a99ce9ae96e15e1b5d046ff2837d6b46e} 
+\index{VolumeView.cpp@{VolumeView.cpp}!PADDING\_Y@{PADDING\_Y}}
+\index{PADDING\_Y@{PADDING\_Y}!VolumeView.cpp@{VolumeView.cpp}}
+\doxysubsubsection{\texorpdfstring{PADDING\_Y}{PADDING\_Y}}
+{\footnotesize\ttfamily \#define PADDING\+\_\+Y~70}
+
+\Hypertarget{VolumeView_8cpp_a04e9a412f96468cbddc827bd544f6e10}\label{VolumeView_8cpp_a04e9a412f96468cbddc827bd544f6e10} 
+\index{VolumeView.cpp@{VolumeView.cpp}!SPEAKER\_Y@{SPEAKER\_Y}}
+\index{SPEAKER\_Y@{SPEAKER\_Y}!VolumeView.cpp@{VolumeView.cpp}}
+\doxysubsubsection{\texorpdfstring{SPEAKER\_Y}{SPEAKER\_Y}}
+{\footnotesize\ttfamily \#define SPEAKER\+\_\+Y~130}
+
+\Hypertarget{VolumeView_8cpp_a8a01cbb9f585617110976d14d25f1c66}\label{VolumeView_8cpp_a8a01cbb9f585617110976d14d25f1c66} 
+\index{VolumeView.cpp@{VolumeView.cpp}!TEXT\_Y@{TEXT\_Y}}
+\index{TEXT\_Y@{TEXT\_Y}!VolumeView.cpp@{VolumeView.cpp}}
+\doxysubsubsection{\texorpdfstring{TEXT\_Y}{TEXT\_Y}}
+{\footnotesize\ttfamily \#define TEXT\+\_\+Y~100}
+
+\Hypertarget{VolumeView_8cpp_a03e28977803b4fc622befda0bab7f5fb}\label{VolumeView_8cpp_a03e28977803b4fc622befda0bab7f5fb} 
+\index{VolumeView.cpp@{VolumeView.cpp}!VOLBAR\_WEIGHT@{VOLBAR\_WEIGHT}}
+\index{VOLBAR\_WEIGHT@{VOLBAR\_WEIGHT}!VolumeView.cpp@{VolumeView.cpp}}
+\doxysubsubsection{\texorpdfstring{VOLBAR\_WEIGHT}{VOLBAR\_WEIGHT}}
+{\footnotesize\ttfamily \#define VOLBAR\+\_\+\+WEIGHT~6}
+
+\Hypertarget{VolumeView_8cpp_a2258c0c95f20b9d7b0e013c3efbda536}\label{VolumeView_8cpp_a2258c0c95f20b9d7b0e013c3efbda536} 
+\index{VolumeView.cpp@{VolumeView.cpp}!VOLBAR\_Y@{VOLBAR\_Y}}
+\index{VOLBAR\_Y@{VOLBAR\_Y}!VolumeView.cpp@{VolumeView.cpp}}
+\doxysubsubsection{\texorpdfstring{VOLBAR\_Y}{VOLBAR\_Y}}
+{\footnotesize\ttfamily \#define VOLBAR\+\_\+Y~220}
+

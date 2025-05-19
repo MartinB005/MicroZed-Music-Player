@@ -1,0 +1,164 @@
+\doxysection{Application Class Reference}
+\hypertarget{classApplication}{}\label{classApplication}\index{Application@{Application}}
+
+
+{\ttfamily \#include $<$Application.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classApplication_afa8cc05ce6b6092be5ecdfdae44e05f8}{Application}} ()
+\item 
+void \mbox{\hyperlink{classApplication_aa38ca47b50935092078cef4281ab66bc}{start}} ()
+\begin{DoxyCompactList}\small\item\em start the user interface of the application \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classApplication_a9908f665ab8959b5b43f6d24e08f83aa}{is\+Playing\+Track}} ()
+\item 
+bool \mbox{\hyperlink{classApplication_a550b30522bfac2f8612ed53c4fc99f0b}{has\+Paused\+Track}} ()
+\item 
+void \mbox{\hyperlink{classApplication_a1a864191818436f046ac14a5dd4305af}{set\+Volume}} (double volume)
+\begin{DoxyCompactList}\small\item\em Set the global volume for the application and show the volume view. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classApplication_acffbef083fb19ef24243b39ef179a7fb}{get\+Volume}} ()
+\item 
+bool \mbox{\hyperlink{classApplication_ab8004035eaebcfb9fb0fc766ce2c209c}{showing\+Playing\+View}} ()
+\item 
+\mbox{\hyperlink{classListView}{List\+View}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classApplication_accb2449aca423006f7e5a8704e2b8670}{get\+Main\+List\+View}} ()
+\begin{DoxyCompactList}\small\item\em Get the main list object of the application. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMediaPlayer}{Media\+Player}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classApplication_ac5a49dc0e32808a5ad36fb109d0ca84c}{get\+Media\+Player}} ()
+\begin{DoxyCompactList}\small\item\em Get the Media Player object of the application. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classLCD}{LCD}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classApplication_ac95c9a51350ba40939ddaffc66d79ddd}{get\+LCD}} ()
+\begin{DoxyCompactList}\small\item\em Get the \doxylink{classLCD}{LCD} object of the application. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classApplication_aff0277a1549b8c72bfa2cb9c3a590734}{open\+Selected\+File}} ()
+\begin{DoxyCompactList}\small\item\em Open the file which is currently selected in main listview. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classApplication_a073bb9e4802de0d347058dd6745f1141}{show\+Playing\+View}} ()
+\begin{DoxyCompactList}\small\item\em Show the currently playing track view. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classApplication_afa8cc05ce6b6092be5ecdfdae44e05f8}\label{classApplication_afa8cc05ce6b6092be5ecdfdae44e05f8} 
+\index{Application@{Application}!Application@{Application}}
+\index{Application@{Application}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{Application()}{Application()}}
+{\footnotesize\ttfamily Application\+::\+Application (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classApplication_ac95c9a51350ba40939ddaffc66d79ddd}\label{classApplication_ac95c9a51350ba40939ddaffc66d79ddd} 
+\index{Application@{Application}!getLCD@{getLCD}}
+\index{getLCD@{getLCD}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{getLCD()}{getLCD()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classLCD}{LCD}} \texorpdfstring{$\ast$}{*} Application\+::get\+LCD (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the \doxylink{classLCD}{LCD} object of the application. 
+
+\begin{DoxyReturn}{Returns}
+LCD\texorpdfstring{$\ast$}{*} lcd pointer 
+\end{DoxyReturn}
+\Hypertarget{classApplication_accb2449aca423006f7e5a8704e2b8670}\label{classApplication_accb2449aca423006f7e5a8704e2b8670} 
+\index{Application@{Application}!getMainListView@{getMainListView}}
+\index{getMainListView@{getMainListView}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{getMainListView()}{getMainListView()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classListView}{List\+View}} \texorpdfstring{$\ast$}{*} Application\+::get\+Main\+List\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the main list object of the application. 
+
+\begin{DoxyReturn}{Returns}
+List\+View\texorpdfstring{$\ast$}{*} list pointer 
+\end{DoxyReturn}
+\Hypertarget{classApplication_ac5a49dc0e32808a5ad36fb109d0ca84c}\label{classApplication_ac5a49dc0e32808a5ad36fb109d0ca84c} 
+\index{Application@{Application}!getMediaPlayer@{getMediaPlayer}}
+\index{getMediaPlayer@{getMediaPlayer}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{getMediaPlayer()}{getMediaPlayer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMediaPlayer}{Media\+Player}} \texorpdfstring{$\ast$}{*} Application\+::get\+Media\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the Media Player object of the application. 
+
+\begin{DoxyReturn}{Returns}
+Media\+Player\texorpdfstring{$\ast$}{*} media player pointer 
+\end{DoxyReturn}
+\Hypertarget{classApplication_acffbef083fb19ef24243b39ef179a7fb}\label{classApplication_acffbef083fb19ef24243b39ef179a7fb} 
+\index{Application@{Application}!getVolume@{getVolume}}
+\index{getVolume@{getVolume}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{getVolume()}{getVolume()}}
+{\footnotesize\ttfamily double Application\+::get\+Volume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classApplication_a550b30522bfac2f8612ed53c4fc99f0b}\label{classApplication_a550b30522bfac2f8612ed53c4fc99f0b} 
+\index{Application@{Application}!hasPausedTrack@{hasPausedTrack}}
+\index{hasPausedTrack@{hasPausedTrack}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{hasPausedTrack()}{hasPausedTrack()}}
+{\footnotesize\ttfamily bool Application\+::has\+Paused\+Track (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classApplication_a9908f665ab8959b5b43f6d24e08f83aa}\label{classApplication_a9908f665ab8959b5b43f6d24e08f83aa} 
+\index{Application@{Application}!isPlayingTrack@{isPlayingTrack}}
+\index{isPlayingTrack@{isPlayingTrack}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{isPlayingTrack()}{isPlayingTrack()}}
+{\footnotesize\ttfamily bool Application\+::is\+Playing\+Track (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classApplication_aff0277a1549b8c72bfa2cb9c3a590734}\label{classApplication_aff0277a1549b8c72bfa2cb9c3a590734} 
+\index{Application@{Application}!openSelectedFile@{openSelectedFile}}
+\index{openSelectedFile@{openSelectedFile}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{openSelectedFile()}{openSelectedFile()}}
+{\footnotesize\ttfamily void Application\+::open\+Selected\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Open the file which is currently selected in main listview. 
+
+\Hypertarget{classApplication_a1a864191818436f046ac14a5dd4305af}\label{classApplication_a1a864191818436f046ac14a5dd4305af} 
+\index{Application@{Application}!setVolume@{setVolume}}
+\index{setVolume@{setVolume}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{setVolume()}{setVolume()}}
+{\footnotesize\ttfamily void Application\+::set\+Volume (\begin{DoxyParamCaption}\item[{double}]{volume }\end{DoxyParamCaption})}
+
+
+
+Set the global volume for the application and show the volume view. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em volume} & new volume \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classApplication_ab8004035eaebcfb9fb0fc766ce2c209c}\label{classApplication_ab8004035eaebcfb9fb0fc766ce2c209c} 
+\index{Application@{Application}!showingPlayingView@{showingPlayingView}}
+\index{showingPlayingView@{showingPlayingView}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{showingPlayingView()}{showingPlayingView()}}
+{\footnotesize\ttfamily bool Application\+::showing\+Playing\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+true if playing view is shown 
+
+false if playing view is not shown 
+\end{DoxyReturn}
+\Hypertarget{classApplication_a073bb9e4802de0d347058dd6745f1141}\label{classApplication_a073bb9e4802de0d347058dd6745f1141} 
+\index{Application@{Application}!showPlayingView@{showPlayingView}}
+\index{showPlayingView@{showPlayingView}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{showPlayingView()}{showPlayingView()}}
+{\footnotesize\ttfamily void Application\+::show\+Playing\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Show the currently playing track view. 
+
+\Hypertarget{classApplication_aa38ca47b50935092078cef4281ab66bc}\label{classApplication_aa38ca47b50935092078cef4281ab66bc} 
+\index{Application@{Application}!start@{start}}
+\index{start@{start}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void Application\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+start the user interface of the application 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+ui/\mbox{\hyperlink{Application_8h}{Application.\+h}}\item 
+ui/\mbox{\hyperlink{Application_8cpp}{Application.\+cpp}}\end{DoxyCompactItemize}

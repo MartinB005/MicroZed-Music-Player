@@ -1,0 +1,94 @@
+\doxysection{peripherals/\+DAC.cpp File Reference}
+\hypertarget{DAC_8cpp}{}\label{DAC_8cpp}\index{peripherals/DAC.cpp@{peripherals/DAC.cpp}}
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include "{}DAC.\+h"{}}\newline
+{\ttfamily \#include "{}core/mzapo\+\_\+phys.\+h"{}}\newline
+{\ttfamily \#include "{}core/mzapo\+\_\+regs.\+h"{}}\newline
+Include dependency graph for DAC.\+cpp\+:
+% FIG 0
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{DAC_8cpp_ac5d6b1ff619627d3c3ef4bf67c23fca1}{PMOD1}}~\texorpdfstring{$\ast$}{*}(volatile uint32\+\_\+t\texorpdfstring{$\ast$}{*})(pmod1 + \mbox{\hyperlink{mzapo__regs_8h_a0c9c4a643f93b7bc0c19f767bc780825}{DCSPDRV\+\_\+\+REG\+\_\+\+CR\+\_\+o}})
+\item 
+\#define \mbox{\hyperlink{DAC_8cpp_a089fe88b798065b21caa295bc9c55f1d}{PMOD2}}~\texorpdfstring{$\ast$}{*}(volatile uint32\+\_\+t\texorpdfstring{$\ast$}{*})(pmod2 + \mbox{\hyperlink{mzapo__regs_8h_a0c9c4a643f93b7bc0c19f767bc780825}{DCSPDRV\+\_\+\+REG\+\_\+\+CR\+\_\+o}})
+\item 
+\#define \mbox{\hyperlink{DAC_8cpp_a49c7fa84a12115fcb4a29b45fb1ab2b9}{SER}}~4
+\item 
+\#define \mbox{\hyperlink{DAC_8cpp_aac4e779549d986cb2818b94d2a1a2931}{SRCLK}}~5
+\item 
+\#define \mbox{\hyperlink{DAC_8cpp_a44a1ca2c7678c780de06d4c9afc2e610}{RCLK}}~4
+\item 
+\#define \mbox{\hyperlink{DAC_8cpp_a8d219236e0adc07bf5b86ab511030771}{DAC\+\_\+\+RESOLUTION}}~16
+\item 
+\#define \mbox{\hyperlink{DAC_8cpp_a11f27b3b63dfc15c4b4fbb665a3ce3fe}{MSB}}~(1 $<$$<$ \mbox{\hyperlink{DAC_8cpp_a8d219236e0adc07bf5b86ab511030771}{DAC\+\_\+\+RESOLUTION}})
+\item 
+\#define \mbox{\hyperlink{DAC_8cpp_a21005f9f4e2ce7597c5eb4351816d7e2}{OFFSET}}~6
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+struct timespec \mbox{\hyperlink{DAC_8cpp_a091de8e47dabaf0cbbe810824f6fb94d}{interval}} = \{.tv\+\_\+sec = 0, .tv\+\_\+nsec = 1000000\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{DAC_8cpp_a8d219236e0adc07bf5b86ab511030771}\label{DAC_8cpp_a8d219236e0adc07bf5b86ab511030771} 
+\index{DAC.cpp@{DAC.cpp}!DAC\_RESOLUTION@{DAC\_RESOLUTION}}
+\index{DAC\_RESOLUTION@{DAC\_RESOLUTION}!DAC.cpp@{DAC.cpp}}
+\doxysubsubsection{\texorpdfstring{DAC\_RESOLUTION}{DAC\_RESOLUTION}}
+{\footnotesize\ttfamily \#define DAC\+\_\+\+RESOLUTION~16}
+
+\Hypertarget{DAC_8cpp_a11f27b3b63dfc15c4b4fbb665a3ce3fe}\label{DAC_8cpp_a11f27b3b63dfc15c4b4fbb665a3ce3fe} 
+\index{DAC.cpp@{DAC.cpp}!MSB@{MSB}}
+\index{MSB@{MSB}!DAC.cpp@{DAC.cpp}}
+\doxysubsubsection{\texorpdfstring{MSB}{MSB}}
+{\footnotesize\ttfamily \#define MSB~(1 $<$$<$ \mbox{\hyperlink{DAC_8cpp_a8d219236e0adc07bf5b86ab511030771}{DAC\+\_\+\+RESOLUTION}})}
+
+\Hypertarget{DAC_8cpp_a21005f9f4e2ce7597c5eb4351816d7e2}\label{DAC_8cpp_a21005f9f4e2ce7597c5eb4351816d7e2} 
+\index{DAC.cpp@{DAC.cpp}!OFFSET@{OFFSET}}
+\index{OFFSET@{OFFSET}!DAC.cpp@{DAC.cpp}}
+\doxysubsubsection{\texorpdfstring{OFFSET}{OFFSET}}
+{\footnotesize\ttfamily \#define OFFSET~6}
+
+\Hypertarget{DAC_8cpp_ac5d6b1ff619627d3c3ef4bf67c23fca1}\label{DAC_8cpp_ac5d6b1ff619627d3c3ef4bf67c23fca1} 
+\index{DAC.cpp@{DAC.cpp}!PMOD1@{PMOD1}}
+\index{PMOD1@{PMOD1}!DAC.cpp@{DAC.cpp}}
+\doxysubsubsection{\texorpdfstring{PMOD1}{PMOD1}}
+{\footnotesize\ttfamily \#define PMOD1~\texorpdfstring{$\ast$}{*}(volatile uint32\+\_\+t\texorpdfstring{$\ast$}{*})(pmod1 + \mbox{\hyperlink{mzapo__regs_8h_a0c9c4a643f93b7bc0c19f767bc780825}{DCSPDRV\+\_\+\+REG\+\_\+\+CR\+\_\+o}})}
+
+\Hypertarget{DAC_8cpp_a089fe88b798065b21caa295bc9c55f1d}\label{DAC_8cpp_a089fe88b798065b21caa295bc9c55f1d} 
+\index{DAC.cpp@{DAC.cpp}!PMOD2@{PMOD2}}
+\index{PMOD2@{PMOD2}!DAC.cpp@{DAC.cpp}}
+\doxysubsubsection{\texorpdfstring{PMOD2}{PMOD2}}
+{\footnotesize\ttfamily \#define PMOD2~\texorpdfstring{$\ast$}{*}(volatile uint32\+\_\+t\texorpdfstring{$\ast$}{*})(pmod2 + \mbox{\hyperlink{mzapo__regs_8h_a0c9c4a643f93b7bc0c19f767bc780825}{DCSPDRV\+\_\+\+REG\+\_\+\+CR\+\_\+o}})}
+
+\Hypertarget{DAC_8cpp_a44a1ca2c7678c780de06d4c9afc2e610}\label{DAC_8cpp_a44a1ca2c7678c780de06d4c9afc2e610} 
+\index{DAC.cpp@{DAC.cpp}!RCLK@{RCLK}}
+\index{RCLK@{RCLK}!DAC.cpp@{DAC.cpp}}
+\doxysubsubsection{\texorpdfstring{RCLK}{RCLK}}
+{\footnotesize\ttfamily \#define RCLK~4}
+
+\Hypertarget{DAC_8cpp_a49c7fa84a12115fcb4a29b45fb1ab2b9}\label{DAC_8cpp_a49c7fa84a12115fcb4a29b45fb1ab2b9} 
+\index{DAC.cpp@{DAC.cpp}!SER@{SER}}
+\index{SER@{SER}!DAC.cpp@{DAC.cpp}}
+\doxysubsubsection{\texorpdfstring{SER}{SER}}
+{\footnotesize\ttfamily \#define SER~4}
+
+\Hypertarget{DAC_8cpp_aac4e779549d986cb2818b94d2a1a2931}\label{DAC_8cpp_aac4e779549d986cb2818b94d2a1a2931} 
+\index{DAC.cpp@{DAC.cpp}!SRCLK@{SRCLK}}
+\index{SRCLK@{SRCLK}!DAC.cpp@{DAC.cpp}}
+\doxysubsubsection{\texorpdfstring{SRCLK}{SRCLK}}
+{\footnotesize\ttfamily \#define SRCLK~5}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{DAC_8cpp_a091de8e47dabaf0cbbe810824f6fb94d}\label{DAC_8cpp_a091de8e47dabaf0cbbe810824f6fb94d} 
+\index{DAC.cpp@{DAC.cpp}!interval@{interval}}
+\index{interval@{interval}!DAC.cpp@{DAC.cpp}}
+\doxysubsubsection{\texorpdfstring{interval}{interval}}
+{\footnotesize\ttfamily struct timespec interval = \{.tv\+\_\+sec = 0, .tv\+\_\+nsec = 1000000\}}
+
